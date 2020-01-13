@@ -32,3 +32,4 @@ class CreateTemasTable extends Migration
         Schema::dropIfExists('temas');
     }
 }
+
