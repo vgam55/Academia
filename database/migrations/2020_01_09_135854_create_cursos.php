@@ -14,7 +14,7 @@ class CreateCursos extends Migration
     public function up()
     {
         Schema::create('cursos', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
             $table->integer('id_clase')->unsigned();
             $table->integer('id_temario')->unsigned();
             $table->integer('id_horario')->unsigned();

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProfesoresTable extends Migration
+class CreateHorasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateProfesoresTable extends Migration
      */
     public function up()
     {
-        Schema::create('profesores', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('nombre');
-            $table->string('apellidos');
-            $table->string('telefono');
-            $table->string('email');
-            $table->string('titulo');
+        Schema::create('horas', function (Blueprint $table) {
+            $table->Increments('id');
+            $table->time('hora_ini');
+            $table->time('hora_fin');
+            $table->string('dia');
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreateProfesoresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('profesores');
+        Schema::dropIfExists('horas');
     }
 }

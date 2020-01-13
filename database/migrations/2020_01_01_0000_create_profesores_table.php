@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTemasTable extends Migration
+class CreateProfesoresTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateTemasTable extends Migration
      */
     public function up()
     {
-        Schema::create('temas', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('profesores', function (Blueprint $table) {
+            $table->Increments('id');
+            $table->string('nombre');
+            $table->string('apellidos');
+            $table->string('telefono');
+            $table->string('email');
             $table->string('titulo');
-            $table->text('descripcion');
-            $table->integer('horas');
             $table->timestamps();
         });
     }
@@ -29,7 +31,6 @@ class CreateTemasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('temas');
+        Schema::dropIfExists('profesores');
     }
 }
-

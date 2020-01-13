@@ -14,7 +14,7 @@ class CreateTemariosTable extends Migration
     public function up()
     {
         Schema::create('temarios', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
             $table->integer('tema_1')->unsigned();
             $table->integer('tema_2')->unsigned();
             $table->integer('tema_3')->unsigned();
