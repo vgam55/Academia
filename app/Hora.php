@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Grupo extends Model
+class Hora extends Model
 {
     //
 }

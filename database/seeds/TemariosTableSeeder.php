@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Tema;
-class TemasTablesSeeder extends Seeder
+use App\Temario;
+class TemariosTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class TemasTablesSeeder extends Seeder
      */
     public function run()
     {
-        factory(Tema::Class,100)->create();
+        factory(Temario::Class,10)->create();
     }
 }
