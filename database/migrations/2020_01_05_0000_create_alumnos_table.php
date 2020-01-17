@@ -20,6 +20,8 @@ class CreateAlumnosTable extends Migration
             $table->string('email');   //Para contactarle en caso de nece3sidad.Normalmente sera de uno de los padres. 
             $table->string('telefono');  //Para contactarle en caso de nece3sidad.Normalmente sera de uno de los padres. 
             $table->date('fecha_nacimiento');
+            $table->integer('id_grupo')->unsigned();
+            $table->foreign('id_grupo')->references('id')->on('grupos');
             $table->timestamps();
         });
     }

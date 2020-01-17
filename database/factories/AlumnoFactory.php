@@ -3,6 +3,7 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Alumno;
+use App\Grupo;
 use Faker\Generator as Faker;
 
 $factory->define(Alumno::class, function (Faker $faker) {
@@ -12,5 +13,6 @@ $factory->define(Alumno::class, function (Faker $faker) {
         'email'=>$faker->unique()->safeEmail,
         'telefono'=>$faker->tollFreePhoneNumber,
         'fecha_nacimiento'=>$faker->date(),
+        'id_grupo'=>Grupo::inRandomOrder()->value('id')?:factory(Grupo::class),
     ];
 });

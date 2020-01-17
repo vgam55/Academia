@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Hora;
-class HorasTableSeeder extends Seeder
+
+class ClasesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class HorasTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Hora::Class,30)->create();
+        //
     }
 }

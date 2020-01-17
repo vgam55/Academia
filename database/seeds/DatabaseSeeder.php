@@ -13,10 +13,14 @@ class DatabaseSeeder extends Seeder
     {
     	//Model::unguard();
           $this->call(UsersTableSeeder::class);
-          $this->call(AlumnosTableSeeder::class);
           $this->call(ProfesoresTableSeeder::class);
+          $this->call(GruposTableSeeder::class);
           $this->call(TemasTablesSeeder::class);
+          $this->call(HorasTableSeeder::class);
+          $this->call(AlumnosTableSeeder::class);
           $this->call(TemariosTableSeeder::class);
+          $this->call(HorariosTableSeeder::class);
+
        // Model::reguard();
     }
 }
