@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
           $this->call(AlumnosTableSeeder::class);
           $this->call(TemariosTableSeeder::class);
           $this->call(HorariosTableSeeder::class);
-
+          $this->call(ClasesTableSeeder::class);
+          $this->call(CursosTableSeeder::class);
        // Model::reguard();
     }
 }

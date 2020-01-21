@@ -4,7 +4,7 @@
 
 use App\Horario;
 use Faker\Generator as Faker;
-
+use App\Hora;
 $factory->define(Horario::class, function (Faker $faker) {
     return [
         'hora1'=>Hora::inRandomOrder()->value('id')?:factory(Hora::class),
