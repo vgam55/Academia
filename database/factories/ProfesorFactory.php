@@ -10,7 +10,6 @@ $factory->define(Profesor::class, function (Faker $faker) {
         'nombre'=>$faker->name,
         'apellidos'=>$faker->lastName,
         'email'=>$faker->safeEmail,
-        'telefono'=>$faker->tollFreePhoneNumber,
         'titulo'=>$faker->randomElement(['Monitor Fide', 'Monitor FEDA', 'Monitor FVDA']),
     ];
 });

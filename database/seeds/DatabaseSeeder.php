@@ -22,6 +22,8 @@ class DatabaseSeeder extends Seeder
           $this->call(HorariosTableSeeder::class);
           $this->call(ClasesTableSeeder::class);
           $this->call(CursosTableSeeder::class);
+          $this->call(RolesTableSeeder::class);
+          $this->call(PermissionsTableSeeder::class);
        // Model::reguard();
     }
 }

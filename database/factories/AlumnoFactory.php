@@ -11,7 +11,7 @@ $factory->define(Alumno::class, function (Faker $faker) {
         'nombre'=>$faker->name,
         'apellidos'=>$faker->lastName,
         'email'=>$faker->unique()->safeEmail,
-        'telefono'=>$faker->tollFreePhoneNumber,
+        'telefono'=>$faker->PhoneNumber,
         'fecha_nacimiento'=>$faker->date(),
         'id_grupo'=>Grupo::inRandomOrder()->value('id')?:factory(Grupo::class),
     ];
