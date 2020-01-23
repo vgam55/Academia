@@ -16,8 +16,9 @@ class UsersTableSeeder extends Seeder
         $user->apellidos="apellido";
         $user->email="superadmin@academia.com";
         $user->telephone="123456789";
-        $user->password=bcrypt("password");
+        $user->password=bcrypt("password");        
         $user->save();
+        $user->assignRole("SuperAdministrador");
 
         $user=new User();
         $user->name="Admin1";
@@ -26,6 +27,7 @@ class UsersTableSeeder extends Seeder
         $user->telephone="123456789";
         $user->password=bcrypt("password");
         $user->save();
+        $user->assignRole("Administrador");
 
         $user=new User();
         $user->name="Admin2";
@@ -34,6 +36,7 @@ class UsersTableSeeder extends Seeder
         $user->telephone="123456789";
         $user->password=bcrypt("password");
         $user->save();
+        $user->assignRole("Administrador");
 
         $user=new User();
         $user->name="Admin3";
@@ -42,14 +45,16 @@ class UsersTableSeeder extends Seeder
         $user->telephone="123456789";
         $user->password=bcrypt("password");
         $user->save();
+        $user->assignRole("Administrador");
 
-         $user=new User();
+        $user=new User();
         $user->name="Profe1";
         $user->apellidos="apellido";
         $user->email="profe1@academia.com";
         $user->telephone="123456789";
         $user->password=bcrypt("password");
         $user->save();
+        $user->assignRole("Profesor");
         
          $user=new User();
         $user->name="Profe2";
@@ -58,5 +63,6 @@ class UsersTableSeeder extends Seeder
         $user->telephone="123456789";
         $user->password=bcrypt("password");
         $user->save();
+        $user->assignRole("Profesor");
     }
 }
