@@ -56,7 +56,7 @@ class UsersTableSeeder extends Seeder
         $user->save();
         $user->assignRole("Profesor");
         
-         $user=new User();
+        $user=new User();
         $user->name="Profe2";
         $user->apellidos="apellido";
         $user->email="profe2@academia.com";
