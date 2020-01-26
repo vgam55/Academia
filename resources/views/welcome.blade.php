@@ -63,7 +63,7 @@
                     <h3>Roles</h3>
                 </div>
                 <div class="col-2">
-                    <i class='fas fa-user-graduate' style='font-size:36px'></i>
+                   <a href="{{url('/alumnos')}}" ><i class='fas fa-user-graduate' style='font-size:36px'></i></a>
                     <h3>Alumnos</h3>
                 </div>
                 <div class="col-2">
