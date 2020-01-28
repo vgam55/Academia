@@ -78,24 +78,22 @@
             </div>
 
              <div class="row">
-                        
-                            <div class="col-2">
-                                <i class='fas fa-book-reader' style='font-size:36px'></i>
-                                <h3>Cursos</h3>
-                            </div>
-                            <div class="col-2">
-                                <i class='fas fa-users' style='font-size:36px'></i>
-                                <h3>Grupos</h3>
-                            </div>
-                               <div class="col-2">
-                                <i class='fas fa-book-open' style='font-size:36px'></i>
-                                <h3>Horarios</h3>
-                            </div>
+                <div class="col-2">
+                    <a href=""> <h3> <i class='fas fa-book-reader' style='font-size:36px'></i> Cursos</h3></a>        
+                </div>
+                <div class="col-2">
+                    <i class='fas fa-users' style='font-size:36px'></i>
+                    <h3>Grupos</h3>
+                </div>
+                <div class="col-2">
+                   <i class='fas fa-book-open' style='font-size:36px'></i>
+                   <h3>Horarios</h3>
+                </div>
                 
-                            <div class="col-2">
-                               <i class='fas fa-chalkboard' style='font-size:36px'></i>
-                                <h3>Clases</h3>
-                            </div>
+                <div class="col-2">
+                     <a href="{{ url('/clases') }}">  <i class='fas fa-chalkboard' style='font-size:36px'></i> </a>  
+                     <h3>Clases<h3>
+                </div>
                             <div class="col-2">
                                 <i class='fas fa-list' style='font-size:36px'></i>
                                 <h3>Temario</h3>

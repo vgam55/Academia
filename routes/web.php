@@ -17,6 +17,17 @@ Route::get('/', function () {
 
 Auth::routes();
 
+//Rutas para listar TODOS los elementos de la tabla. Van por orden alfabetico.
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/alumnos','AlumnosController@listarAlumnos');
-Route::get('notes/{id}/destroy','NotesController@destroy');
+Route::get('/clases','ClasesController@listarClases');
+Route::get('/cursos','CursosController@listarCursos');
+Route::get('/grupos','GruposController@listarGrupos');
+Route::get('/horas','HorasController@listarHoras');
+Route::get('/horarios', 'HorariosController@listarHorarios');
+Route::get('/Permisos','PermisosController@listarPermisos');
+Route::get('/profesores','ProfesoresController@listarProfesores');
+Route::get('/roles','RolesController@listarRoles');
+Route::get('/temas', 'TemasController@listarTemas');
+Route::get('/temarios','TemariosController@listarTemarios');
+Route::get('/usuarios','UsersController@listarUsuarios');

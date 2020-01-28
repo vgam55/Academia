@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class CursosController extends Controller
 {
-    //
+    public function listarCursos()
+    {
+    	
+    }
 }
