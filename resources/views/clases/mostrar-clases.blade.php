@@ -23,8 +23,8 @@
 	   <tbody>
      		<tr>
 			      <th scope="row">{{$clase->id}}</th>
-			      <td>{{$clase->id_profesor}}</td>
-			      <td>{{$clase->id_grupo}}</td>			      
+			      <td>{{$clase->name}}  {{$clase->apellidos}}</td>
+			      <td>{{$clase->nombre}}</td>			      
 	    	</tr>		 
 		</tbody>
 	  @endforeach

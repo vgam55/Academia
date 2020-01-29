@@ -67,7 +67,7 @@
                     <h3>Alumnos</h3>
                 </div>
                 <div class="col-2">
-                    <i class='fas fa-chalkboard-teacher' style='font-size:36px'></i>
+                    <a href="{{ url('/profesores') }}"><i class='fas fa-chalkboard-teacher' style='font-size:36px'></i></a>
                     <h3>Profesores</h3>
                 </div>
             </div>  
