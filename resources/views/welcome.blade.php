@@ -6,11 +6,13 @@
 
         <title>Academia</title>
 
-        <!-- Fonts -->
+        <!-- Enlace para cargar bootstrap-->
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
        
+       <link rel="stylesheet" href="{{ asset('css/iconos')}}">
+       <!-- Enlace para crear los iconos-->
        <script src="https://kit.fontawesome.com/459debd0ca.js" crossorigin="anonymous"></script>
-     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+       
      <style>
         h1{
             font-size:2em;
@@ -38,14 +40,17 @@
     <body>
        <div class="container-fluid" id="container">
             <header class="row">
-               <div id="marcoLogo" class="col-3"><i id="logo" class='fas fa-school' style='font-size:36px'></i>  
+               <div id="marcoLogo" class="col-3"><i id="logo" class=' iconos fas fa-school' style='font-size:36px'></i>  
                </div>
                 <div class="col-7">
                     <span>ACADEMIA</span>
                     <span>{{ Auth::user()->name}}</span>
                 </div>
                 <div class="col-4">
-                    <button class="btn btn-primary" style='font-size:24px'>Salir <i class='fas fa-sign-in-alt' style='font-size:33px'></i></button>
+                    <form action="{{ url('logout') }}" method="post">
+                        {{ csrf_field() }}
+                         <button  class="btn btn-primary" style='font-size:24px'>Salir </button>
+                     </form>
                 </div>
             </header>
              <div class="row">
@@ -54,7 +59,7 @@
              </div>
              <div class="row">
                 <div class="col-2">  
-                    <i class='fas fa-user-tie' style='font-size:36px'></i>
+                    <a href="{{ url('/usuarios')}}"><i class='fas fa-user-tie' style='font-size:36px'></i></a>
                     <h3>Usuarios</h3>
                 </div>
                               

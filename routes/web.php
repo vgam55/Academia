@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+Route::post('logout',function(){
+	Auth::logout();
+});
+
 Auth::routes();
 
 //Rutas para listar TODOS los elementos de la tabla. Van por orden alfabetico.
