@@ -1,0 +1,42 @@
+h1
+ {
+    font-size:2em;
+ }
+header
+ {
+    height:50px;
+    background: gold;
+ }
+#marcoLogo
+ {
+     align-content: center;
+     background: lightgreen;
+     border-radius: 50%;
+     height:50px;
+     width:50px;
+     display:table;
+     vertical-align: center;
+     align: center;
+}
+
+#logo 
+ {
+     align-self: center;
+ }
+hr
+ {
+     width: 100%;
+     color:black;
+ }
+.fila
+{
+	width: 100%;
+	height: 15%;
+	clear:both;
+}
+
+.columna
+{
+	width:16%;
+	float:left;
+}
