@@ -73,7 +73,7 @@
                     <h3>Cursos</h3>    
                 </div>
                 <div class="col-2">
-                    <a href=""><i class='fas fa-users' style='font-size:36px'></i></a>
+                    <a href="{{url('/grupos')}}"><i class='fas fa-users' style='font-size:36px'></i></a>
                     <h3>Grupos</h3>
                 </div>
                 <div class="col-2">

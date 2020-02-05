@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Cursos</title>
-</head>
-<body>
+@extends('layouts.base')
 
-</body>
-</html>
+@section('content')
+
+
+@endsection
