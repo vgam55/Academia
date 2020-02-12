@@ -10,13 +10,12 @@ header
 #marcoLogo
  {
      align-content: center;
-     background: lightgreen;
      border-radius: 50%;
      height:50px;
      width:50px;
      display:table;
      vertical-align: center;
-     align: center;
+     text-align: center;
 }
 
 #logo 

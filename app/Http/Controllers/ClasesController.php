@@ -26,6 +26,7 @@ class ClasesController extends Controller
 }
 
 
+
 /*
   $articles =DB::table('articles') 
   ->join('categories', 'articles.id', '=', 'categories.id') 

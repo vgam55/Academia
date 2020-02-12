@@ -1,8 +1,8 @@
 @extends('layouts.base')
 
 @section('content')
-	<div>
-		<h1><i class='fas fa-chalkboard' style='font-size:36px'></i> CLASES</h1>
+	<div id="container" class="container-fluid">
+		<h1><span class="icon-container"><i class='iconos fas fa-chalkboard' style='font-size:36px'></i></span> CLASES</h1>
 	</div>
 	
 	<div>

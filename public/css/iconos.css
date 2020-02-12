@@ -1,8 +1,9 @@
 .icon-container{
-	height:64px;
-	width: 64px;
-	background-color: blue;
+	height:70px;
+	width: 70px;
+	background-color: #000080;
 	border-radius:50%;
+	font-size:36px;
 }
 
 .iconos{
