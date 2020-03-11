@@ -1,12 +1,5 @@
-.icon-container{
-	height:70px;
-	width: 70px;
-	background-color: #000080;
-	border-radius:50%;
-	font-size:36px;
-}
-
 .iconos{
-	color: white;
+	color: black;
 	font-size:36px;
+	margin-right: 10px;
 }

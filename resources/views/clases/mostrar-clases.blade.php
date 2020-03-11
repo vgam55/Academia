@@ -2,7 +2,9 @@
 
 @section('content')
 	<div id="container" class="container-fluid">
-		<h1><span class="icon-container"><i class='iconos fas fa-chalkboard' style='font-size:36px'></i></span> CLASES</h1>
+		<div class="row">
+		<h1><span class="icon-container col-2"><i class='iconos fas fa-chalkboard' style='font-size:36px'></i></span> <span class="col-10">CLASES</span></h1>
+
 	</div>
 	
 	<div>
@@ -27,4 +29,5 @@
 	  </table>	
 
 	</div>
+ </div>
 @endsection

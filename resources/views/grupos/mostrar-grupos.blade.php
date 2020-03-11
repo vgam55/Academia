@@ -3,8 +3,8 @@
 @section('content')
 	<!-- Cabecera de la pagina. Se usa para identificar donde estamos-->
 	<div id="container" class="container-fluid">
-		<span class="icon-container"><i class='iconos fas fa-users'></i></span> <h2 class=' d-inline-block align-middle mr-2'>GRUPOS
-		<a href="#" class="btn btn-primary"><i class='fas fa-plus'></i>  Crear Grupo</a> </h2>
+		<i class='iconos fas fa-users'></i><h2 class=' d-inline-block align-middle mr-2'>GRUPOS </h2>
+		<a href="#" class="btn btn-primary"><i class='fas fa-plus'></i>  Crear Grupo</a>
 	
 	
    <!-- -->

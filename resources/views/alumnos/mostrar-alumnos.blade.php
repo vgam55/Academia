@@ -3,7 +3,7 @@
 @section('content')
 <div id="container" class="container-fluid">
 	<div>
-		<h1><span class="icon-container"><i class='iconos fas fa-user-graduate'></i></span> ALUMNOS</h1>
+		<span><i class='iconos fas fa-user-graduate'></i></span> <h1> ALUMNOS</h1>
 	</div>
 	<table class="table">
 	  <thead class="thead-dark">
