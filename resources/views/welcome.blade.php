@@ -70,7 +70,7 @@
 
              <div class="row">
                 <div class="col-2">
-                    <a href="" class="icon-container col-2">  <i class='iconos fas fa-book-reader'></i> </a>
+                    <a href="{{ url('/cursos')}}" class="icon-container col-2">  <i class='iconos fas fa-book-reader'></i> </a>
                     <h3>Cursos</h3>    
                 </div>
                 <div class="col-2">

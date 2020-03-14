@@ -6,20 +6,7 @@
 		<h1><i class='fas fa-chalkboard' style='font-size:36px'></i> PROFESORES <a href="#" class="btn btn-primary"><i class='fas fa-plus'></i>  Añadir profesor</a></h1>
 	</div>
 	
-    <div id="aniadir">
-		<form style="display:inline">
-		    <h3>Añadir profesor</h3>
-		   	<label for="filtrarNombre">Nombre </label>
-		   	<input type="text" id="filtrarNombre"></input>
-		   	<label for="filtrarApellidos">Apellidos</label>
-		   	<input type="text" id="filtrarApellidos"></input>
-		   	<label for="filtrarEmail">Email</label>
-		   	<input type="text" id="filtrarEmail"></input>
-		    <label for="filtrarTelefono">Telefono</label>
-		   	<input type="text" id="filtrarTelefono"></input>
-		   	<button class="btn btn-success">Añadir</button>
-	    </form>
-	</div>
+    @include('profesores.crear-profesores')
 	<div id="filtrar">
 		<form style="display:inline">
 	   	<h3>Filtrar Profesores</h3>

@@ -12,7 +12,7 @@
 	<!-- Generamos una tabla para visualizar los grupos y poder borrar o modificarlos -->
 	
 	
-   @include('grupos.crear-grupo')
+   @include('grupos.crear-grupos')
    
    <form style="display:inline">
    	<label for="filtrarGrupos">Filtrar Grupos</label>

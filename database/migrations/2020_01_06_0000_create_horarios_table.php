@@ -15,6 +15,7 @@ class CreateHorariosTable extends Migration
     {
         Schema::create('horarios', function (Blueprint $table) {
             $table->Increments('id');
+            $table->String('nombre_horario');
             $table->integer('hora1')->unsigned();
             $table->integer('hora2')->unsigned();
             $table->integer('hora3')->unsigned();

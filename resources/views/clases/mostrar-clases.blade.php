@@ -6,16 +6,7 @@
 		<h1><span class="icon-container col-2"><i class='iconos fas fa-chalkboard' style='font-size:36px'></i></span> <span class="col-10">CLASES</span></h1>
 	</div>
 	
-	<div id="aniadir">
-		<form style="display:inline">
-		    <h3>Añadir Clase</h3>
-		   	<label for="filtrarNombre">Nombre del Grupo</label>
-		   	<input type="text" id="filtrarNombre"></input>
-		   	<label for="filtrarApellidos">Profesor</label>
-		   	<input type="text" id="filtrarApellidos"></input>
-		   	<button class="btn btn-success">Añadir</button>
-	    </form>
-	</div>
+	@include('clases.crear-clases')
 	<div id="filtrar">
 		<form style="display:inline">
 	    <h3>Filtrar Clases</h3>

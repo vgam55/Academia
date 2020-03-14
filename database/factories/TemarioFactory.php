@@ -7,6 +7,7 @@ use Faker\Generator as Faker;
 use App\Tema;
 $factory->define(Temario::class, function (Faker $faker) {
     return [
+        'nombre_temario'=>$faker->sentence(2);
         'tema_1'=>Tema::inRandomOrder()->value('id')?:factory(Tema::class),
         'tema_2'=>Tema::inRandomOrder()->value('id')?:factory(Tema::class),
         'tema_3'=>Tema::inRandomOrder()->value('id')?:factory(Tema::class),

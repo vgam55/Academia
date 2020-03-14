@@ -5,6 +5,21 @@
 		<h1><i class='fas fa-list' style='font-size:36px'></i> TEMAS</h1>
 	</div>
 	
+	@include('temas.crear-temas')
+    <div id="filtrar">
+		<form style="display:inline">
+	   	<h3>Filtrar Temas</h3>
+	   	<label for="filtrarTitulo">Titulo</label>
+	   	<input type="text" id="filtrarTitulo"></input>
+	   	<label for="filtrarDescripcion">Descripción</label>
+	   	<input type="text" id="filtrarDescripcion"></input>
+	    <label for="filtrarHoras">Horas</label>
+	   	<input type="text" id="filtrarHoras"></input>
+	   	<button class="btn btn-warning">Filtrar</button>
+	   </form>
+	</div>
+
+
 	<div>
 	
 	<table class="table">

@@ -5,20 +5,8 @@
   	<div>
   		<i class='iconos fas fa-user-tie '></i> <h2 class=' d-inline-block align-middle mr-2 col-10'>USUARIOS <a href="#" class="btn btn-primary"><i class='fas fa-plus'></i>  Añadir Usuario</a></h2>
     </div>
-    <div id="aniadir">
-		<form style="display:inline">
-		    <h3>Añadir Grupo</h3>
-		   	<label for="filtrarNombre">Nombre del Grupo</label>
-		   	<input type="text" id="filtrarNombre"></input>
-		   	<label for="filtrarApellidos">Apellidos</label>
-		   	<input type="text" id="filtrarApellidos"></input>
-		   	<label for="filtrarEmail">Email</label>
-		   	<input type="text" id="filtrarEmail"></input>
-		    <label for="filtrarTelefono">Telefono</label>
-		   	<input type="text" id="filtrarTelefono"></input>
-		   	<button class="btn btn-success">Añadir</button>
-	    </form>
-	</div>
+   @include('usuarios.crear-usuarios')
+    
 	<div id="filtrar">
 		<form style="display:inline">
 	   	<h3>Filtrar Grupos</h3>
