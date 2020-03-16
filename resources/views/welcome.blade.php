@@ -87,7 +87,7 @@
                      <h3>Clases<h3>
                 </div>
                 <div class="col-2">
-                   <a href="" class="icon-container col-2"><i class='iconos fas fa-book'></i></a>
+                   <a href="{{ url('/temarios')}}" class="icon-container col-2"><i class='iconos fas fa-book'></i></a>
                     <h3>Temario</h3>
                 </div>
                      

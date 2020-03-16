@@ -48,7 +48,7 @@
 			      <td>{{$alumno->email}}</td>
 			      <td>{{$alumno->telefono}}</td>
 			      <td>{{$alumno->fecha_nacimiento}}</td>
-			      <td>{{$alumno->id_grupo}}</td>
+			      <td><a href="#">{{$alumno->nombre_grupo}}</a></td>
 			      <td>
 			      	<span class="btn btn-success"><i class='fa fa-eye' title='Más información' ></i></span> 
 			      	<span class="btn btn-info"><i class='fas fa-pencil-alt' title='Editar'></i></span>
