@@ -1,6 +1,6 @@
 <div id="aniadir">
 		<form style="display:inline">
-		    <h3>Añadir Clase</h3>
+		    <h3>Crear Clase</h3>
 		   	<label for="filtrarNombre">Nombre del Grupo</label>
 		   	<input type="text" id="filtrarNombre"></input>
 		   	<label for="filtrarApellidos">Profesor</label>

@@ -7,23 +7,44 @@
 	</div>
 	 @include('alumnos.crear-alumnos')
 	<div id="filtrar">
-		<form style="display:inline">
-	   	<h3>Filtrar alumos</h3>
-	 	<label for="filtrarNombre">Nombre</label>
-	   	<input type="text" id="filtrarNombre"></input>
-	   	<label for="filtrarApellidos">Apellidos</label>
-	   	<input type="text" id="filtrarApellidos"></input>
-	   	<label for="filtrarEmail">Email</label>
-	   	<input type="text" id="filtrarEmail"></input>
-	    <label for="filtrarTelefono">Telefono</label>
-	   	<input type="text" id="filtrarTelefono"></input>
-	   	<br>
-		<label for="filtrarTelefono">Fecha de Nacimiento</label>
-	   	<input type="text" id="filtrarTelefono"></input>
-	   	<label for="filtrarTelefono">Grupo</label>
-	   	<input type="text" id="filtrarTelefono"></input>
-	   	<button class="btn btn-warning">Filtrar</button>
-	   </form>
+		<form>
+		    <h3>Filtrar alumno</h3>
+		    <!-- fila 1-->
+		    <div class="row">
+		    	<div class="col">
+				   	<label for="filtrarNombre">Nombre</label>
+				   	<input type="text" id="filtrarNombre"></input>
+		   		</div>
+		   	    <div class="col">
+				   	<label for="filtrarApellidos">Apellidos</label>
+				   	<input type="text" id="filtrarApellidos"></input>
+		   		</div>
+		   		<div class="col">
+		   		  	<label for="filtrarEmail">Email  </label>
+		   			<input type="text" id="filtrarEmail"></input>
+		   		</div>
+		   	 </div>
+		    <!-- fila 2 -->
+		    <div class="row">
+		    	<div class="col">
+				    <label for="filtrarTelefono">Telefono</label>
+				   	<input type="text" id="filtrarTelefono"></input>
+				</div>
+				<div class="col">
+				   	<label for="filtrarFecha">F. Nacimi</label>
+				   	<input type="text" id="filtrarFecha"></input>
+			    </div>
+			    <div class="col">
+				   	<label for="filtrarGrupo">Grupo</label>
+				   	<input type="text" id="filtrarGrupo"></input>
+			    </div>
+		   </div>
+		   <div class="row">
+				    <div class="col">
+				   		<button class="btn btn-warning">Filtrar</button>
+				   	</div>
+				</div>
+	    </form>
 	</div>
 	<table class="table">
 	  <thead class="thead-dark">

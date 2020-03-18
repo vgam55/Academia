@@ -3,7 +3,7 @@
 @section('content')
 <div id="container" class="container-fluid">
 	<div class="row">
-		<h1><span class="icon-container"><i class='iconos fas fa-book-reader'></i></span> <span class="col-10">Cursos</span></h1>
+		<i class='iconos fas fa-book-reader' style="color: black"></i>  <h1>Cursos</h1>
 	</div>
 	
 	@include('cursos.crear-cursos')

@@ -3,12 +3,12 @@
 @section('content')
 <div id="container" class="container-fluid">
 	<div>
-		<h1><i class='iconos fas fa-book'></i></i>TEMAS <a href="#" class="btn btn-primary"><i class='fas fa-plus'></i>  Añadir Tema</a></h1>
+		<h1><i class='iconos fas fa-book' style="color:black"></i></i>TEMARIOS <a href="#" class="btn btn-primary"><i class='fas fa-plus' ></i>  Añadir Tema</a></h1>
 	</div>
 	 @include('temarios.crear-temario')
 	<div id="filtrar">
 		<form style="display:inline">
-	   	<h3>Filtrar alumos</h3>
+	   	<h3>Filtrar Temarios</h3>
 	 	<label for="filtrarNombreTemario">Nombre</label>
 	   	<input type="text" id="filtrarTemario"></input>
 	   	<label for="filtrarTema">Tema</label>

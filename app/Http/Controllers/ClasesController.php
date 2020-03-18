@@ -13,14 +13,9 @@ class ClasesController extends Controller
     			->join('grupos','id_grupo','=','grupos.id')
     			->join('profesores', 'id_profesor','=','profesores.id')
     			->join('users','profesores.id_user','=','users.id')
-    			->select('clases.id','grupos.nombre','users.name','users.apellidos')
+    			->select('clases.id','clases.nombre_clase','grupos.nombre_grupo','users.name','users.apellidos')
     			->get();
-   		$profesores=DB::table('users')
-   					->join('profesores','users.id','=','profesores.id')
-   					->select('profesores.id', 'users.name', 'users.apellidos')
-   					->get();
-    	return view('clases.mostrar-clases',['clases'=>$clases,
-                                           'profesores'=>$profesores]);
+  	return view('clases.mostrar-clases',['clases'=>$clases]);
     }
 }
 

@@ -1,5 +1,25 @@
 .iconos{
-	color: black;
-	font-size:36px;
+	color: white;
+	font-size:30px;
 	margin-right: 10px;
+	align-self: center;
+}
+
+.icon-container
+{
+	height: 45px;
+	width: 45px;
+	margin-left:20%;
+	padding-left:7.5px;
+	padding-right:7.5px;
+	padding-top:3px;
+	padding-bottom:3px;
+	border-radius:50%;
+	background-color:#000088;
+	margin-right: 7.5%;
+	margin-left: 7.5%;
+}
+h3
+{
+	margin-top:4%;
 }

@@ -39,56 +39,77 @@
                  <hr>
              </div>
              <div class="row">
-                <div class="col-2">  
-                    <a href="{{ url('/usuarios')}}" class="icon-container col-2" ><span ><i class='iconos fas fa-user-tie'><span></i></a>
-                    <h3>Usuarios</h3>
-                </div>
-                         
+                <div class="icon-container">  
+                    {{--<a href="{{ url('/usuarios')}}"><span class="col-2 icon-container"><i class='iconos fas fa-user-tie'><span></i></a>--}}
+                   <i class='iconos fas fa-user-tie'></i>
+                   <br>
+                   <a href="{{ url('/usuarios')}}"><h3>Usuarios</h3></a>
+                </div>      
 
-                <div class="col-2">
-                   <a href="" class="icon-container col-2" > <i class='iconos fas fa-user-lock'></i></a>
-                    <h3>Roles</h3>
+                <div class="icon-container">
+                    {{--<a href="" class="col-2 icon-container" ><span> <i class='iconos fas fa-user-lock'></i></a>--}}
+                    <i class='iconos fas fa-user-lock'></i>
+                    <br>
+                    <a href="{{url('/roles')}}" ><h3>Roles</h3></sa>
                 </div>
-                <div class="col-2">
-                   <a href="{{url('/alumnos')}}" class="icon-container col-2" ><i class='iconos fas fa-user-graduate'></i></a>
-                    <h3>Alumnos</h3>
+                <div class="icon-container">
+                   {{--<a href="{{url('/alumnos')}}" class="icon-container col-2" ><i class='iconos fas fa-user-graduate'></i></a>--}}
+                   <i class='iconos fas fa-user-graduate'></i>
+                   <br>
+                   <a href="{{url('/alumnos')}}" ><h3>Alumnos</h3></a>
                 </div>
-                <div class="col-2">
-                    <a href="{{ url('/profesores') }}" class="icon-container col-2" ><i class='iconos fas fa-chalkboard-teacher' style='font-size:36px'></i></a>
-                    <h3>Profesores</h3>
+                <div class="icon-container">
+                   {{-- <a href="{{ url('/profesores') }}" class="icon-container col-2" ><i class='iconos fas fa-chalkboard-teacher' style='font-size:36px'></i></a>--}}
+                   <i class='iconos fas fa-chalkboard-teacher'></i>
+                   <br>
+                   <a href="{{ url('/profesores') }}"><h3>Profesores</h3></a>
                 </div>
-                <div class="col-2">
-                    <a href="{{ url('/temas')}}" class="icon-container col-2" ><i class='iconos fas fa-list'></i></a>
-                    <h3>Temas</h3>
+                <div class="icon-container">
+                    {{--<a href="{{ url('/temas')}}" class="icon-container col-2" ><i class='iconos fas fa-list'></i></a>--}}
+                    <i class='iconos fas fa-list'></i>
+                    <br>
+                    <a href="{{ url('/temas')}}"><h3>Temas</h3></a>
                 </div>
             </div>  
-
+            
+            <br>
+            <br>
             <div class="row"> 
-                <h1>Servicios</h1>
+                <h1>Servicios</h1></a>
                 <hr>
             </div>
 
              <div class="row">
-                <div class="col-2">
-                    <a href="{{ url('/cursos')}}" class="icon-container col-2">  <i class='iconos fas fa-book-reader'></i> </a>
-                    <h3>Cursos</h3>    
+                <div class="icon-container">
+                   {{-- <a href="{{ url('/cursos')}}">  <i class='iconos fas fa-book-reader'></i> </a>--}}
+                   <i class='iconos fas fa-book-reader'></i>
+                   <br>
+                   <a href="{{ url('/cursos')}}"><h3>Cursos</h3>  </a>  
                 </div>
-                <div class="col-2">
-                    <a href="{{url('/grupos')}}" class="icon-container col-2"><i class='iconos fas fa-users'></i></a>
-                    <h3>Grupos</h3>
+                <div class="icon-container">
+                   {{-- <a href="{{url('/grupos')}}" class="icon-container col-2"><i class='iconos fas fa-users'></i></a>--}}
+                   <i class='iconos fas fa-users'></i></a>
+                   <br>
+                    <a href="{{url('/grupos')}}"><h3>Grupos</h3></a>
                 </div>
-                <div class="col-2">
-                   <a href="" class="icon-container col-2"><i class='iconos fas fa-book-open'></i></a>
-                   <h3>Horarios</h3>
+                <div class="icon-container">
+                 
+                   <i class='iconos fas fa-book-open'></i>
+                   <br>
+                   <a href="#"><h3>Horarios</h3></a>
                 </div>
                 
-                <div class="col-2">
-                     <a href="{{ url('/clases') }}" class="icon-container col-2">  <i class='iconos fas fa-chalkboard'></i> </a>  
-                     <h3>Clases<h3>
+                <div class="icon-container">
+                    {{-- <a href="{{ url('/clases') }}"> <span class="icon-container col-2"> <i class='iconos fas fa-chalkboard'></i> </a>  --}}
+                     <i class='iconos fas fa-chalkboard'></i>
+                     <br>
+                     <a href="{{ url('/clases') }}"><h3>Clases</h3><a>
                 </div>
-                <div class="col-2">
-                   <a href="{{ url('/temarios')}}" class="icon-container col-2"><i class='iconos fas fa-book'></i></a>
-                    <h3>Temario</h3>
+                <div class="icon-container">
+                  {{-- <a href="{{ url('/temarios')}}"><i class='iconos fas fa-book'></i></a>--}}
+                    <i class='iconos fas fa-book'></i>
+                    <br>
+                    <a href="{{ url('/temarios')}}"><h3>Temario</h3></a>
                 </div>
                      
             </div>  

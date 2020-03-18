@@ -2,7 +2,7 @@
 
 @section('content')
 	<div>
-		<h1><i class='fas fa-list' style='font-size:36px'></i> TEMAS</h1>
+		<h1><i class='fas fa-list' style='font-size:36px; color:black'></i> TEMAS</h1>
 	</div>
 	
 	@include('temas.crear-temas')

@@ -3,7 +3,7 @@
 @section('content')
 	<div id="container" class="container-fluid">
 		<div class="row">
-		<h1><span class="icon-container col-2"><i class='iconos fas fa-chalkboard' style='font-size:36px'></i></span> <span class="col-10">CLASES</span></h1>
+		<i class='iconos fas fa-chalkboard' style='font-size:36px; color:black'></i><h1>CLASES</span></h1>
 	</div>
 	
 	@include('clases.crear-clases')
@@ -23,6 +23,7 @@
 	  <thead class="thead-dark">
 	    <tr>
 	      <th scope="col">#</th>
+	      <th scope="col">Clase</th>
 	      <th scope="col">Profesor</th>
 	      <th scope="col">Grupo</th>
 	      <th scope="col">Acciones</th>
@@ -30,10 +31,11 @@
 	  </thead>
       @foreach($clases as $clase)
 	   <tbody>
-     		<tr>
+	   		<tr>
 			      <th scope="row">{{$clase->id}}</th>
+			      <td>{{$clase->nombre_clase}}</td>
 			      <td>{{$clase->name}}  {{$clase->apellidos}}</td>
-			      <td>{{$clase->nombre}}</td>	
+			      <td><a href="#">{{$clase->nombre_grupo}}</a></td>	
 			      <td>
 			      	<span class="btn btn-success"><i class='fa fa-eye' title='Más información' ></i></span> 
 			      	<span class="btn btn-info"><i class='fas fa-pencil-alt' title='Editar'></i></span>

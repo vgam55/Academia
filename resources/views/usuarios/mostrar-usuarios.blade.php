@@ -3,13 +3,13 @@
 @section('content')
   <div id="container" class="container-fluid">
   	<div>
-  		<i class='iconos fas fa-user-tie '></i> <h2 class=' d-inline-block align-middle mr-2 col-10'>USUARIOS <a href="#" class="btn btn-primary"><i class='fas fa-plus'></i>  Añadir Usuario</a></h2>
+  		<i class='iconos fas fa-user-tie' style='color: black'></i> <h2 class=' d-inline-block align-middle mr-2 col-10'>USUARIOS <a href="#" class="btn btn-primary"><i class='fas fa-plus' ></i>  Añadir Usuario</a></h2>
     </div>
    @include('usuarios.crear-usuarios')
     
 	<div id="filtrar">
 		<form style="display:inline">
-	   	<h3>Filtrar Grupos</h3>
+	   	<h3>Filtrar Usuarios</h3>
 	 	<label for="filtrarNombre">Nombre del Grupo</label>
 	   	<input type="text" id="filtrarNombre"></input>
 	   	<label for="filtrarApellidos">Apellidos</label>

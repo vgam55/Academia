@@ -1,6 +1,6 @@
 <div id="filtrar">
 		<form style="display:inline">
-	   	<h3>Añadir Cursos</h3>
+	   	<h3>Crear Cursos</h3>
 	 	<label for="aniadirClase">Clase</label>
 	   	<input type="text" id="aniadirClase"></input>
 	   	<label for="aniadirTemario">Temario</label>
