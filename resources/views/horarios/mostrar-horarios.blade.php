@@ -9,9 +9,9 @@
 	<div id="filtrar">
 		<form style="display:inline">
 	   	<h3>Filtrar Temarios</h3>
-	 	<label for="filtrarNombreTemario">Nombre</label>
-	   	<input type="text" id="filtrarTemario"></input>
-	   	<label for="filtrarTema">Tema</label>
+	 	<label for="filtrarNombreHorario">Nombre</label>
+	   	<input type="text" id="filtrarNombreHorario"></input>
+	   	<label for="filtrarHoraIni">Hora Inicio</label>
 	   	<input type="text" id="filtrarTema"></input>
 	   	<button class="btn btn-warning">Filtrar</button>
 	   </form>
@@ -21,16 +21,22 @@
 	    <tr>
 	      <th scope="col">#</th>
 	      <th scope="col">Nombre</th>
+	      <th scope="col">Día</th>
+	      <th scope="col">Hora de inicio</th>
+	      <th scope="col">Hora de fin</th>
+
 	      <th scope="col">Acciones</th>
 	    </tr>
 	  </thead>
 
-		@foreach($temarios as $temario)
+		@foreach($horarios as $horario)
 			<tbody>
 				<tr>
-			      <th scope="row">{{$temario->id}}</th>
-			      <td><a href="#">{{$temario->nombre_temario}}</a></td>
-			      {{--<td><a href="#">{{$alumno->nombre_grupo}}</a></td>--}}
+			      <th scope="row">{{$horario->id}}</th>
+			      <td>{{$horario->nombre_horario}}</td>
+			      <td>{{$horario->hora1}}</td>
+			      <td>{{$horario->hora2}}</td>
+			      <td>{{$horario->hora3}}</td>
 			      <td>
 			      	<span class="btn btn-success"><i class='fa fa-eye' title='Más información' ></i></span> 
 			      	<span class="btn btn-info"><i class='fas fa-pencil-alt' title='Editar'></i></span>

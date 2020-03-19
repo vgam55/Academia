@@ -21,7 +21,7 @@
     <body>
        <div class="container-fluid" id="container">
             <header class="row">
-               <div id="marcoLogo" class="col-3"><span class="icon-container"><i id="logo" class=' iconos fas fa-school'></i></span></i>  
+               <div id="marcoLogo" id= "icon-container" class="col-3"><i id="logo" class=' iconos fas fa-school'></i></i>  
                </div>
                 <div class="col-7">
                     <span>ACADEMIA</span>
@@ -70,6 +70,13 @@
                     <br>
                     <a href="{{ url('/temas')}}"><h3>Temas</h3></a>
                 </div>
+
+                <div class="icon-container">
+                   <i class='iconos fas fa-clock'></i>
+                    <br>
+                    <a href="{{ url('/horas')}}"><h3>Horas</h3></a>
+                </div>
+                
             </div>  
             
             <br>
@@ -96,7 +103,7 @@
                  
                    <i class='iconos fas fa-book-open'></i>
                    <br>
-                   <a href="#"><h3>Horarios</h3></a>
+                   <a href="/horarios"><h3>Horarios</h3></a>
                 </div>
                 
                 <div class="icon-container">

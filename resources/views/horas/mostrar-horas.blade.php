@@ -3,16 +3,18 @@
 @section('content')
 <div id="container" class="container-fluid">
 	<div>
-		<h1><i class='iconos fas fa-book' style="color:black"></i></i>TEMARIOS <a href="#" class="btn btn-primary"><i class='fas fa-plus' ></i>  Añadir Tema</a></h1>
+		<h1><i class='iconos fas fa-clock' style="color:black"></i></i></i>Horas <a href="#" class="btn btn-primary"><i class='fas fa-plus' ></i>  Añadir Hora</a></h1>
 	</div>
-	 @include('temarios.crear-temario')
+	 @include('horas.crear-horas')
 	<div id="filtrar">
 		<form style="display:inline">
-	   	<h3>Filtrar Temarios</h3>
-	 	<label for="filtrarNombreTemario">Nombre</label>
-	   	<input type="text" id="filtrarTemario"></input>
-	   	<label for="filtrarTema">Tema</label>
-	   	<input type="text" id="filtrarTema"></input>
+	   	<h3>Filtrar Horas</h3>
+	 	<label for="filtrarNombreHorario">Nombre</label>
+	   	<input type="text" id="filtrarNombreHorario"></input>
+	   	<label for="filtrarHoraIni">Hora Inicio</label>
+	   	<input type="time" id="filtrarHoraIni"></input>
+	   	<label for="filtrarHoraFin">Hora Inicio</label>
+	   	<input type="time" id="filtrarHoraFin"></input>
 	   	<button class="btn btn-warning">Filtrar</button>
 	   </form>
 	</div>
@@ -20,17 +22,21 @@
 	  <thead class="thead-dark">
 	    <tr>
 	      <th scope="col">#</th>
-	      <th scope="col">Nombre</th>
+	      <th scope="col">Día</th>
+	      <th scope="col">Hora de inicio</th>
+	      <th scope="col">Hora de fin</th>
+
 	      <th scope="col">Acciones</th>
 	    </tr>
 	  </thead>
 
-		@foreach($temarios as $temario)
+		@foreach($horas as $hora)
 			<tbody>
 				<tr>
-			      <th scope="row">{{$temario->id}}</th>
-			      <td><a href="#">{{$temario->nombre_temario}}</a></td>
-			      {{--<td><a href="#">{{$alumno->nombre_grupo}}</a></td>--}}
+			      <th scope="row">{{$hora->id}}</th>
+			      <td>{{$hora->dia}}</td>
+			      <td>{{$hora->hora_ini}}</td>
+			      <td>{{$hora->hora_fin}}</td>
 			      <td>
 			      	<span class="btn btn-success"><i class='fa fa-eye' title='Más información' ></i></span> 
 			      	<span class="btn btn-info"><i class='fas fa-pencil-alt' title='Editar'></i></span>

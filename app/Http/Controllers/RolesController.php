@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-class Roles extends Controller
+use App\Rol;
+class RolesController extends Controller
 {
-    //
+    public function listarRoles()
+    {
+    	$roles=Rol::all();
+    	return view('roles.mostrar-roles',['roles'=>$roles]);
+    }
 }
