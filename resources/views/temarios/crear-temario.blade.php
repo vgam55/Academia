@@ -33,6 +33,7 @@
          @endforeach
       </select>
     </div>
+  <div id="aniadir">
   </div>
 
    <!-- Fila 2-->
@@ -161,6 +162,8 @@
     </div>
    </div>
 </form>
+
+</div>
 
 
 

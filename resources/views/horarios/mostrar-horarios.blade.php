@@ -3,16 +3,16 @@
 @section('content')
 <div id="container" class="container-fluid">
 	<div>
-		<h1><i class='iconos fas fa-book' style="color:black"></i></i>TEMARIOS <a href="#" class="btn btn-primary"><i class='fas fa-plus' ></i>  Añadir Tema</a></h1>
+		<h1><i class='iconos fas fa-book' style="color:black"></i></i>HORARIOS <a href="#" class="btn btn-primary"><i class='fas fa-plus' ></i>  Añadir Horarios</a></h1>
 	</div>
-	 @include('temarios.crear-temario')
+	 @include('horarios.crear-horarios')
 	<div id="filtrar">
 		<form style="display:inline">
-	   	<h3>Filtrar Temarios</h3>
+	   	<h3>Filtrar Horarios</h3>
 	 	<label for="filtrarNombreHorario">Nombre</label>
 	   	<input type="text" id="filtrarNombreHorario"></input>
 	   	<label for="filtrarHoraIni">Hora Inicio</label>
-	   	<input type="text" id="filtrarTema"></input>
+	   	<input type="text" id="filtrarHoraIni"></input>
 	   	<button class="btn btn-warning">Filtrar</button>
 	   </form>
 	</div>
@@ -21,10 +21,11 @@
 	    <tr>
 	      <th scope="col">#</th>
 	      <th scope="col">Nombre</th>
-	      <th scope="col">Día</th>
-	      <th scope="col">Hora de inicio</th>
-	      <th scope="col">Hora de fin</th>
-
+	      <th scope="col">Hora 1</th>
+	      <th scope="col">Hora 2</th>
+	      <th scope="col">Hora 3</th>
+		  <th scope="col">Hora 4</th>
+		  <th scope="col">Hora 5</th>
 	      <th scope="col">Acciones</th>
 	    </tr>
 	  </thead>
@@ -37,6 +38,9 @@
 			      <td>{{$horario->hora1}}</td>
 			      <td>{{$horario->hora2}}</td>
 			      <td>{{$horario->hora3}}</td>
+			      <td>{{$horario->hora4}}</td>
+			      <td>{{$horario->hora5}}</td>
+			      
 			      <td>
 			      	<span class="btn btn-success"><i class='fa fa-eye' title='Más información' ></i></span> 
 			      	<span class="btn btn-info"><i class='fas fa-pencil-alt' title='Editar'></i></span>
@@ -47,7 +51,7 @@
 							<i class="far fa-trash-alt" title='Borrar registro'></i>
 						</button>
 			      	</form>
-			      	<span class="btn btn-succes"><i class='iconos fas fa-list' title="Mostrar Temas"></i></span>
+			      	<span class="btn btn-succes"><i class='iconos fas fa-list' title="Mostrar Horarios"></i></span>
 			      </td>		
 	    		</tr>
 		    </tbody>

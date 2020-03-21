@@ -103,7 +103,7 @@
                  
                    <i class='iconos fas fa-book-open'></i>
                    <br>
-                   <a href="/horarios"><h3>Horarios</h3></a>
+                   <a href="{{url('/horarios')}}"><h3>Horarios</h3></a>
                 </div>
                 
                 <div class="icon-container">
