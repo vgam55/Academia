@@ -35,6 +35,6 @@
 				    <div class="col">
 				   		<button class="btn btn-success ">Añadir</button>
 				   	</div>
-				</div>
+		   </div>
 	    </form>
 	</div>
