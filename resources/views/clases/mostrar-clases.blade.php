@@ -3,18 +3,20 @@
 @section('content')
 	<div id="container" class="container-fluid">
 		<div class="row">
-		<i class='iconos fas fa-chalkboard' style='font-size:36px; color:black'></i><h1>CLASES</span></h1>
+		<i class='iconos fas fa-chalkboard' style='font-size:36px; color:black'></i><h1>CLASES <button  class="btn btn-primary btnAniadir"><i class='fas fa-plus'></i>  Añadir Clases</button></span></h1>
 	</div>
 	
 	@include('clases.crear-clases')
 	<div id="filtrar">
 		<form style="display:inline">
 	    <h3>Filtrar Clases</h3>
-	 	 	<label for="filtrarNombre">Nombre del Grupo</label>
-		   	<input type="text" id="filtrarNombre"></input>
-		   	<label for="filtrarApellidos">Profesor</label>
-		   	<input type="text" id="filtrarApellidos"></input>
-	   	<button class="btn btn-warning">Filtrar</button>
+	 	 	<label for="filtrarGrupo">Nombre de la Clase</label>
+		   	<input type="text" id="filtrarGrupo"></input>
+		   	<label for="filtrarProfesor">Profesor</label>
+		   	<input type="text" id="filtrarProfesor"></input>
+		   	<label for="filtrarGrupo">Grupo</label>
+		   	<input type="text" id="filtrarGrupo"></input>
+	   		<button class="btn btn-warning">Filtrar</button>
 	   </form>
 	</div>
 
@@ -54,4 +56,8 @@
 
 	</div>
  </div>
+@endsection
+
+@section('js')
+	<script src="{{asset('js/mAniadir.js')}}"></script>
 @endsection

@@ -4,7 +4,7 @@
 		   	<label for="aniadirrNombre">Nombre del Grupo</label>
 		   	<input type="text" id="Nombre"></input>
 		   	<label for="aniadirFecha">Año</label>
-		   	<input type="date" id="filtrarTecha"></input>
+		   	<input type="date" id="aniadirFecha"></input>
 		   	<button class="btn btn-success">Añadir</button>
 	    </form>
 	</div>

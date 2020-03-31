@@ -6,9 +6,7 @@
 
         <!-- Enlaces para cargar jquery general y la versión de jquery que sirve para crear pestañas-->
 
-        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-      
-       
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>     
 
         <title>Academia</title>
 
@@ -25,7 +23,9 @@
      </style>
     </head>
     <body>
-       <div class="container-fluid" id="container">
+     
+    </script>
+     <div class="container-fluid" id="container">
             <header class="row">
                <div id="marcoLogo" id= "icon-container" class="col-3"><i id="logo" class=' iconos fas fa-school'></i></i>  
                </div>
@@ -40,6 +40,11 @@
                      </form>
                 </div>
             </header>
+            <div id="pestanias">
+              <ul class="tablist">
+                <li>Inicio <span class="ui-icon ui-icon-close" role="presentation"><i class="fa fa-times"></i></span></li>
+              </ul>
+            </div>
              <div class="row">
                  <h1>Personal, Clientes, Administración</h1>
                  <hr>
@@ -54,7 +59,7 @@
                 <div class="icon-container" id="roles">
                     <i class='iconos fas fa-user-lock'></i>
                     <br>
-                    <a href="{{url('/roles')}}" ><h3>Roles</h3></sa>
+                    <a href="{{url('/roles')}}" ><h3>Roles</h3></a>
                 </div>
                 <div class="icon-container" id="alumnos">
                    <i class='iconos fas fa-user-graduate'></i>
@@ -83,7 +88,7 @@
             <br>
             <br>
             <div class="row"> 
-                <h1>Servicios</h1></a>
+                <h1>Servicios</h1>
                 <hr>
             </div>
 
@@ -108,7 +113,7 @@
                 <div class="icon-container">
                      <i class='iconos fas fa-chalkboard' id="clases"></i>
                      <br>
-                     <a href="{{ url('/clases') }}"><h3>Clases</h3><a>
+                     <a href="{{ url('/clases') }}"><h3>Clases</h3></a>
                 </div>
                 <div class="icon-container">
                     <i class='iconos fas fa-book' id="temarios"></i>
@@ -119,10 +124,6 @@
             </div>  
 
         </div>
-        <br>
-       
-          <button class="btn btn-success" id="prueba">Prueba</button>
-        
         <script src="{{ asset('js/servicios.js') }}"></script>
     </body>
 </html>

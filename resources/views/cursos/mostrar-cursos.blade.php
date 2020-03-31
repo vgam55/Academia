@@ -3,7 +3,7 @@
 @section('content')
 <div id="container" class="container-fluid">
 	<div class="row">
-		<i class='iconos fas fa-book-reader' style="color: black"></i>  <h1>Cursos</h1>
+		<i class='iconos fas fa-book-reader' style="color: black"></i>  <h1>Cursos <button  class="btn btn-primary btnAniadir"><i class='fas fa-plus'></i>  Añadir Cursos</button></h1>
 	</div>
 	
 	@include('cursos.crear-cursos')
@@ -57,4 +57,8 @@
 
 	</div>
 </div>
+@endsection
+
+@section('js')
+	<script src="{{asset('js/mAniadir.js')}}"></script>
 @endsection

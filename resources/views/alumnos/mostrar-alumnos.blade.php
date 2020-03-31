@@ -3,7 +3,7 @@
 @section('content')
 <div id="container" class="container-fluid">
 	<div>
-		<h1><i class='iconos fas fa-user-graduate' style="color: black;"></i>ALUMNOS <a href="#" class="btn btn-primary"><i class='fas fa-plus'></i>  Añadir Alumno</a></h1>
+		<h1><i class='iconos fas fa-user-graduate' style="color: black;"></i>ALUMNOS <a href="#" class="btn btn-primary btnAniadir"><i class='fas fa-plus'></i>  Añadir Alumno</a></h1>
 	</div>
 	 @include('alumnos.crear-alumnos')
 	<div id="filtrar">
@@ -32,7 +32,7 @@
 				</div>
 				<div class="col">
 				   	<label for="filtrarFecha">F. Nacimi</label>
-				   	<input type="text" id="filtrarFecha"></input>
+				   	<input type="date" id="filtrarFecha"></input>
 			    </div>
 			    <div class="col">
 				   	<label for="filtrarGrupo">Grupo</label>
@@ -87,4 +87,8 @@
 
 		</table>
 	</div>
+@endsection
+
+@section('js')
+	<script src="{{asset('js/mAniadir.js')}}"></script>
 @endsection

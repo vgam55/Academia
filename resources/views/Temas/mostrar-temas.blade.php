@@ -2,7 +2,7 @@
 
 @section('content')
 	<div>
-		<h1><i class='fas fa-list' style='font-size:36px; color:black'></i> TEMAS</h1>
+		<h1><i class='fas fa-list' style='font-size:36px; color:black'></i> TEMAS <a href="#"  class="btn btn-primary btnAniadir"><i class='fas fa-plus btnAniadir'></i>  Añadir Temas</a></h1>
 	</div>
 	
 	@include('temas.crear-temas')
@@ -56,4 +56,8 @@
 	  </table>	
 
 	</div>
+@endsection
+
+@section('js')
+	<script src="{{asset('js/mAniadir.js')}}"></script>
 @endsection

@@ -1,4 +1,4 @@
-<div id="filtrar">
+<div id="aniadir">
 		<form style="display:inline">
 	   	<h3>Crear Cursos</h3>
 	 	<label for="aniadirClase">Clase</label>

@@ -4,12 +4,12 @@
   <!-- Fila 1-->
   <div class="row">    
     <div class="col">
-      <label for="nombreGrupo">Nombre del Hora</label>
-      <input type="text" class="form-control" placeholder="Nombre de la hora">
+      <label for="aniadirNombreGrupo">Nombre de la Hora</label>
+      <input type="text" class="form-control" id="crearNombreGrupo" placeholder="Nombre de la hora">
     </div>
     <div class="col">
-       <label for="hora1">Hora 1</label>
-       <select class="form-control" id="hora1">
+       <label for="aniadirHora1">Hora 1</label>
+       <select class="form-control" id="crearHora1">
         <option>Elije una hora </option>
         @foreach($horas as $hora)
          <option value="{{$hora->id}}">{{$hora->dia}} {{$hora->hora_ini}}-{{$hora->hora_fin}}</option>
@@ -17,8 +17,8 @@
       </select>
     </div>
     <div class="col">
-       <label for="hora2">Hora 2</label>
-       <select class="form-control" id="hora2">
+       <label for="aniadirHora2">Hora 2</label>
+       <select class="form-control" id="aniadirHora2">
          <option>Elije una hora </option>
          @foreach($horas as $hora)
            <option value="{{$hora->id}}">{{$hora->dia}} {{$hora->hora_ini}}-{{$hora->hora_fin}}</option>
@@ -29,8 +29,8 @@
 
 <div class="row">
     <div class="col">
-       <label for="hora3">Hora 3</label>
-       <select class="form-control" id="hora3">
+       <label for="aniadirHora3">Hora 3</label>
+       <select class="form-control" id="aniadirHora3">
           <option>Elije una hora </option>
          @foreach($horas as $hora)
           <option value="{{$hora->id}}">{{$hora->dia}} {{$hora->hora_ini}}-{{$hora->hora_fin}}</option>
@@ -43,8 +43,8 @@
    <!-- Fila 2-->
   <div class="row">
     <div class="col">
-       <label for="hora4">Hora 4</label>
-       <select class="form-control" id="hora4">
+       <label for="aniadirHora4">Hora 4</label>
+       <select class="form-control" id="aniadirHora4">
         <option>Elije una hora </option>
         @foreach($horas as $hora)
          <option value="{{$hora->id}}">{{$hora->dia}} {{$hora->hora_ini}}-{{$hora->hora_fin}}</option>
@@ -53,8 +53,8 @@
     </div>
   
     <div class="col">
-       <label for="tema5">Hora 5</label>
-       <select class="form-control" id="hora5">
+       <label for="aniadirHora5">Hora 5</label>
+       <select class="form-control" id="aniadirHora5">
          <option>Elije una hora </option>
         @foreach($horas as $hora)
          <option value="{{$hora->id}}">{{$hora->dia}} {{$hora->hora_ini}}-{{$hora->hora_fin}}</option>
@@ -66,7 +66,7 @@
 <br>
 <div class="row">
 	 <div class="col">
-	   		<button class="btn btn-success ">Añadir</button>
+	   		<button class="btn btn-success" id="btnAniadir">Añadir</button>
 	</div>
 </div>
 </form>

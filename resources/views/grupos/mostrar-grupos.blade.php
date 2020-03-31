@@ -3,16 +3,15 @@
 @section('content')
 	<!-- Cabecera de la pagina. Se usa para identificar donde estamos-->
 	<div id="container" class="container-fluid">
+		<div>
 		<i class='iconos fas fa-users' style="color:black"></i><h2 class=' d-inline-block align-middle mr-2' >GRUPOS </h2>
-		<a href="#" class="btn btn-primary"><i class='fas fa-plus'></i>  Crear Grupo</a>
-	
-	
+		<button class="btn btn-primary btnAniadir"><i class='fas fa-plus'></i>  Crear Grupo</button>
+		<
    <!-- -->
-   
+    
 	<!-- Generamos una tabla para visualizar los grupos y poder borrar o modificarlos -->
 	
-	
-   @include('grupos.crear-grupos')
+	@include('grupos.crear-grupos')
    
    <form style="display:inline">  
 		 <h3>Filtrar Grupo</h3>
@@ -22,6 +21,7 @@
 		 <input type="date" id="filtrarTecha"></input>    
    	     <button class="btn btn-warning">Filtrar</button>
    </form>
+   
 
 	<table class="table">
 	  <thead class="thead-dark">
@@ -55,5 +55,8 @@
 	  </table>	
 
 	</div>
+@endsection
 
+@section('js')
+	<script src="{{asset('js/mAniadir.js')}}"></script>
 @endsection

@@ -4,31 +4,31 @@
 		    <!-- fila 1-->
 		    <div class="row">
 		    	<div class="col">
-				   	<label for="filtrarNombre">Nombre</label>
-				   	<input type="text" id="filtrarNombre"></input>
+				   	<label for="aniadirNombre">Nombre</label>
+				   	<input type="text" id="aniadirNombre"></input>
 		   		</div>
 		   	    <div class="col">
-				   	<label for="filtrarApellidos">Apellidos</label>
-				   	<input type="text" id="filtrarApellidos"></input>
+				   	<label for="aniadirApellidos">Apellidos</label>
+				   	<input type="text" id="aniadirApellidos"></input>
 		   		</div>
 		   		<div class="col">
-		   		  	<label for="filtrarEmail">Email</label>
-		   			<input type="text" id="filtrarEmail"></input>
+		   		  	<label for="aniadirEmail">Email</label>
+		   			<input type="text" id="aniadirEmail"></input>
 		   		</div>
 		   	 </div>
 		    <!-- fila 2 -->
 		    <div class="row">
 		    	<div class="col">
-				    <label for="filtrarTelefono">Telefono</label>
-				   	<input type="text" id="filtrarTelefono"></input>
+				    <label for="aniadirTelefono">Telefono</label>
+				   	<input type="text" id="aniadirTelefono"></input>
 				</div>
 				<div class="col">
-				   	<label for="filtrarFecha">F.Nacimi</label>
-				   	<input type="text" id="filtrarFecha"></input>
+				   	<label for="aniadirFecha">F.Nacimi</label>
+				   	<input type="date" id="aniadirFecha"></input>
 			    </div>
 			    <div class="col">
-				   	<label for="filtrarGrupo">Grupo</label>
-				   	<input type="text" id="filtrarGrupo"></input>
+				   	<label for="aniadirGrupo">Grupo</label>
+				   	<input type="text" id="aniadirGrupo"></input>
 			    </div>
 		   </div>
 		   <div class="row">

@@ -2,12 +2,14 @@
 
 @section('content')
 <div id="container" class="container-fluid">
-	<div>
-		<h1><i class='iconos fas fa-book' style="color:black"></i></i>TEMARIOS <a href="#" class="btn btn-primary"><i class='fas fa-plus' ></i>  Añadir Tema</a></h1>
+	<div class="row">
+		<i class='iconos fas fa-book-reader' style="color: black"></i>  <h1>Cursos <button  class="btn btn-primary btnAniadir"><i class='fas fa-plus'></i>  Añadir Cursos</button></h1>
 	</div>
+
 	 @include('temarios.crear-temario')
+
 	<div id="filtrar">
-		<form style="display:inline">
+		<form>
 	   	<h3>Filtrar Temarios</h3>
 	 	<label for="filtrarNombreTemario">Nombre</label>
 	   	<input type="text" id="filtrarTemario"></input>
@@ -16,6 +18,7 @@
 	   	<button class="btn btn-warning">Filtrar</button>
 	   </form>
 	</div>
+
 	<table class="table">
 	  <thead class="thead-dark">
 	    <tr>
@@ -49,4 +52,8 @@
 
 		</table>
 	</div>
+@endsection
+
+@section('js')
+	<script src="{{asset('js/mAniadir.js')}}"></script>
 @endsection

@@ -3,7 +3,7 @@
 @section('content')
 	
 	<div>
-		<h1><i class='fas fa-chalkboard' style='font-size:36px'></i> PROFESORES <a href="#" class="btn btn-primary"><i class='fas fa-plus'></i>  Añadir profesor</a></h1>
+		<h1><i class='fas fa-chalkboard' style='font-size:36px'></i> PROFESORES <a href="#" class="btn btn-primary"><i class='fas fa-plus btnAniadir'></i>  Añadir profesor</a></h1>
 	</div>
 	
     @include('profesores.crear-profesores')
@@ -18,6 +18,8 @@
 	   	<input type="text" id="filtrarEmail"></input>
 	    <label for="filtrarTelefono">Telefono</label>
 	   	<input type="text" id="filtrarTelefono"></input>
+	   	<label for="filtrarTitulo">Titulo</label>
+		<input type="text" id="filtrarTitulo"></form>
 	   	<button class="btn btn-warning">Filtrar</button>
 	   </form>
 	</div>
@@ -61,4 +63,8 @@
 	  </table>	
 
 	</div>
+@endsection
+
+@section('js')
+	<script src="{{asset('js/mAniadir.js')}}"></script>
 @endsection

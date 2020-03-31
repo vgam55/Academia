@@ -3,7 +3,7 @@
 @section('content')
 <div id="container" class="container-fluid">
 	<div>
-		<h1><i class='iconos fas fa-clock' style="color:black"></i></i></i>Horas <a href="#" class="btn btn-primary"><i class='fas fa-plus' ></i>  Añadir Hora</a></h1>
+		<h1><i class='iconos fas fa-clock' style="color:black"></i></i></i>Horas <butoon class="btn btn-primary btnAniadir"><i class='fas fa-plus btnAniadir' ></i>  Añadir Hora</button></h1>
 	</div>
 	 @include('horas.crear-horas')
 	<div id="filtrar">
@@ -55,4 +55,8 @@
 
 		</table>
 	</div>
+@endsection
+
+@section('js')
+	<script src="{{asset('js/mAniadir.js')}}"></script>
 @endsection

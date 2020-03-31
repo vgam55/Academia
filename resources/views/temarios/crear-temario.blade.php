@@ -1,14 +1,15 @@
-<form>
-  <!-- Fila 1-->
+<div id="aniadir">
+  <h3>Añadir Temario</h3>
+
+ <form>  <!-- Fila 1-->
   <div class="row">
-    <h3>Añadir Temario</h3>
     <div class="col">
-      <label for="nombreGrupo">Nombre del temario</label>
-      <input type="text" class="form-control" placeholder="Nombre del temario">
+      <label for="aniadirNombreTemario">Nombre del temario</label>
+      <input type="text" class="form-control" id="aniadirNombreTemario" placeholder="Nombre del temario">
     </div>
     <div class="col">
-       <label for="tema1">Tema 1</label>
-       <select class="form-control" id="tema1">
+       <label for="aniadirTema1">Tema 1</label>
+       <select class="form-control" id="aniadirTema1">
         <option>Elije un tema </option>
         @foreach($temas as $tema)
          <option value="{{$tema->id}}">{{$tema->titulo}}</option>
@@ -16,8 +17,8 @@
       </select>
     </div>
     <div class="col">
-       <label for="tema2">Tema 2</label>
-       <select class="form-control" id="tema2">
+       <label for="aniadirTema2">Tema 2</label>
+       <select class="form-control" id="aniadirTema2">
          <option>Elije un tema </option>
          @foreach($temas as $tema)
            <option value="{{$tema->id}}">{{$tema->titulo}}</option>
@@ -25,22 +26,21 @@
       </select>
     </div>
     <div class="col">
-       <label for="tema3">Tema 3</label>
-       <select class="form-control" id="tema3">
+       <label for="aniadirTema3">Tema 3</label>
+       <select class="form-control" id="aniadirTema3">
           <option>Elije un tema </option>
          @foreach($temas as $tema)
           <option value="{{$tema->id}}">{{$tema->titulo}}</option>
          @endforeach
       </select>
     </div>
-  <div id="aniadir">
   </div>
 
-   <!-- Fila 2-->
+     <!-- Fila 2-->
   <div class="row">
     <div class="col">
-       <label for="tema4">Tema 4</label>
-       <select class="form-control" id="tema4">
+       <label for="aniadirTema4">Tema 4</label>
+       <select class="form-control" id="aniadirTema4">
         <option>Elije un tema </option>
         @foreach($temas as $tema)
          <option value="{{$tema->id}}">{{$tema->titulo}}</option>
@@ -49,8 +49,8 @@
     </div>
   
     <div class="col">
-       <label for="tema5">Tema 5</label>
-       <select class="form-control" id="tema5">
+       <label for="aniadirTema5">Tema 5</label>
+       <select class="form-control" id="aniadirTema5">
          <option>Elije un tema </option>
         @foreach($temas as $tema)
          <option value="{{$tema->id}}">{{$tema->titulo}}</option>
@@ -59,8 +59,8 @@
     </div>
 
     <div class="col">
-       <label for="tema6">Tema 6</label>
-       <select class="form-control" id="tema6">
+       <label for="aniadirTema6">Tema 6</label>
+       <select class="form-control" id="aniadirTema6">
           <option>Elije un tema </option>
         @foreach($temas as $tema)
          <option value="{{$tema->id}}">{{$tema->titulo}}</option>
@@ -68,8 +68,8 @@
       </select>
     </div>
     <div class="col">
-       <label for="tema7">Tema 7</label>
-       <select class="form-control" id="tema7">
+       <label for="aniadirTema7">Tema 7</label>
+       <select class="form-control" id="aniadirTema7">
          <option>Elije un tema </option>
         @foreach($temas as $tema)
          <option value="{{$tema->id}}">{{$tema->titulo}}</option>
@@ -78,11 +78,11 @@
     </div>
   </div>
 
-   <!-- Fila 3-->
+ <!-- Fila 3-->
   <div class="row">
      <div class="col">
-       <label for="tema8">Tema 8</label>
-       <select class="form-control" id="tema8">
+       <label for="aniadirTema8">Tema 8</label>
+       <select class="form-control" id="aniadirTema8">
           <option>Elije un tema </option>
           @foreach($temas as $tema)
            <option value="{{$tema->id}}">{{$tema->titulo}}</option>
@@ -91,8 +91,8 @@
     </div>
   
     <div class="col">
-       <label for="tema9">Tema 9</label>
-       <select class="form-control" id="tema9">
+       <label for="aniadirTema9">Tema 9</label>
+       <select class="form-control" id="aniadirTema9">
           <option>Elije un tema </option>
           @foreach($temas as $tema)
             <option value="{{$tema->id}}">{{$tema->titulo}}</option>
@@ -101,8 +101,8 @@
     </div>
 
     <div class="col">
-       <label for="tema10">Tema 10</label>
-       <select class="form-control" id="tema10">
+       <label for="aniadirTema10">Tema 10</label>
+       <select class="form-control" id="aniadirTema10">
           <option>Elije un tema </option>
           @foreach($temas as $tema)
            <option value="{{$tema->id}}">{{$tema->titulo}}</option>
@@ -110,8 +110,8 @@
       </select>
     </div>
     <div class="col">
-       <label for="tema11">Tema 11</label>
-       <select class="form-control" id="tema11">
+       <label for="aniadirTema11">Tema 11</label>
+       <select class="form-control" id="aniadirTema11">
           <option>Elije un tema </option>
           @foreach($temas as $tema)
             <option value="{{$tema->id}}">{{$tema->titulo}}</option>
@@ -120,21 +120,21 @@
     </div>
   </div>
 
-   <!-- Fila 4-->
+     <!-- Fila 4-->
    <div class="row">
-  <div class="col">
-       <label for="tema12">Tema 12</label>
-       <select class="form-control" id="tema12">
+     <div class="col">
+       <label for="aniadirTema12">Tema 12</label>
+       <select class="form-control" id="aniadirTema12">
           <option>Elije un tema </option>
           @foreach($temas as $tema)
            <option value="{{$tema->id}}">{{$tema->titulo}}</option>
           @endforeach
       </select>
-    </div>
+     </div>
   
     <div class="col">
-       <label for="tema13">Tema 13</label>
-       <select class="form-control" id="tema13">
+       <label for="aniadirTema13">Tema 13</label>
+       <select class="form-control" id="aniadirTema13">
           <option>Elije un tema </option>
           @foreach($temas as $tema)
            <option value="{{$tema->id}}">{{$tema->titulo}}</option>
@@ -143,8 +143,8 @@
     </div>
 
     <div class="col">
-       <label for="tema14">Tema 14</label>
-       <select class="form-control" id="tema14">
+       <label for="aniadirTema14">Tema 14</label>
+       <select class="form-control" id="aniadirTema14">
          <option>Elije un tema </option>
           @foreach($temas as $tema)
            <option value="{{$tema->id}}">{{$tema->titulo}}</option>
@@ -152,8 +152,8 @@
       </select>
     </div>
     <div class="col">
-       <label for="tema15">Tema 15</label>
-       <select class="form-control" id="tema15">
+       <label for="aniadirTema15">Tema 15</label>
+       <select class="form-control" id="aniadirTema15">
          <option>Elije un tema </option>
           @foreach($temas as $tema)
            <option value="{{$tema->id}}">{{$tema->titulo}}</option>
@@ -161,9 +161,13 @@
       </select>
     </div>
    </div>
-</form>
+
+  <button class="btn btn-success">Añadir</button>
+
+ </form>
 
 </div>
+
 
 
 
