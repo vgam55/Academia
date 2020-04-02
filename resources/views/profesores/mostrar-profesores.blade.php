@@ -3,7 +3,7 @@
 @section('content')
 	
 	<div>
-		<h1><i class='fas fa-chalkboard' style='font-size:36px'></i> PROFESORES <a href="#" class="btn btn-primary"><i class='fas fa-plus btnAniadir'></i>  Añadir profesor</a></h1>
+		<h1><i class='fas fa-chalkboard' style='font-size:36px'></i> PROFESORES <button class="btn btn-primary btnAniadir"><i class='fas fa-plus btnAniadir'></i>  Añadir profesor</button></h1>
 	</div>
 	
     @include('profesores.crear-profesores')

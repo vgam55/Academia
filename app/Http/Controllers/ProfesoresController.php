@@ -14,4 +14,9 @@ class ProfesoresController extends Controller
     			    ->get();
     	return view('profesores.mostrar-profesores',['profesores'=>$profesores]);
     }
+
+    public function aniadirProfesores()
+    {
+    	
+    }
 }

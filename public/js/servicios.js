@@ -46,7 +46,7 @@ function nombreElemento(elemento)
            success: function (datos) {
                 $('.tablist').append('<li id="usuarios">Usuarios</>'); 
                 $('#usuarios').append('<div id="usuarios1"></div>');
-                $('#usuarios1').html1(data);
+                $('#usuarios1').html(data);
             },
            error:function(jqXHR,estado, error, data){
            	alert('El error es '+error);

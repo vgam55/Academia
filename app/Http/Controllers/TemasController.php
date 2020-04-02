@@ -11,4 +11,9 @@ class TemasController extends Controller
    	 $temas=Tema::all();
    	 return view('temas.mostrar-temas',['temas'=>$temas]);
    }
+
+   public function aniadirTema()
+   {
+   	 echo "hola radiola";
+   }
 }

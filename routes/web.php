@@ -35,3 +35,13 @@ Route::get('/roles','RolesController@listarRoles');
 Route::get('/temas', 'TemasController@listarTemas');
 Route::get('/temarios','TemariosController@listarTemarios');
 Route::get('/usuarios','UsersController@listarUsuarios');
+
+//Rutas para añadir nuevos registros
+Route::post('/aniadirAlumno','AlumnosController@aniadirAlumno');
+Route::post('/aniadirTemas','TemasController@aniadirTemas');
+Route::post('/aniadirCursos','CursosController@aniadirCurso');
+Route::post('/aniadirGrupos','GruposController@aniadirGrupos');
+Route::post('/aniadirHoras','HorasController@aniadirHoras');
+Route::post('/aniadirHorarios','HorariosController@aniadirHorario');
+Route::post('/aniadirClases','ClasesController@aniadirClase');
+Route::post('/aniadirTemarios','TemariosController@aniadirTemario');
