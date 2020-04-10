@@ -42,7 +42,7 @@ function nombreElemento(elemento)
     $.ajax({
     	   type: "GET",
            url:ruta,
-           data:data
+           data:data,
            success: function (datos) {
                 $('.tablist').append('<li id="usuarios">Usuarios</>'); 
                 $('#usuarios').append('<div id="usuarios1"></div>');
