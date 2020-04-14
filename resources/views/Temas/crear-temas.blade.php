@@ -4,7 +4,7 @@
 		{{ csrf_field() }}
         {{ method_field('POST') }}
 		   	
-		   	<label for="Titulo">Titulo</label>
+		   	<label for="aniadirTitulo">Titulo</label>
 		   	<input type="text" id="aniadirTitulo" name="aniadirTitulo"></input>
 		   	<label for="aniadirDescripcion">Descripción</label>
 		   	<input type="text" id="aniadirDescripcion" name="aniadirDescripcion"></input>

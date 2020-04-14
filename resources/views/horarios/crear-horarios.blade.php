@@ -1,5 +1,7 @@
 <div id="aniadir">
-	<form>
+	<form action="{{ url('/aniadirHorarios') }}" class="aniadirForm" id="horarios" name="horarios">
+    {{ csrf_field() }}
+    {{ method_field('POST') }}
 		<h3>Añadir Horario</h3>
   <!-- Fila 1-->
   <div class="row">    

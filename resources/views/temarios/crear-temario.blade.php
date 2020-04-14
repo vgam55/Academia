@@ -1,7 +1,10 @@
 <div id="aniadir">
   <h3>Añadir Temario</h3>
 
- <form>  <!-- Fila 1-->
+ <form action="{{ url('/aniadirTemarios')}}"> 
+    {{ csrf_field() }}
+    {{ method_field('POST') }}
+         <!-- Fila    1-->
   <div class="row">
     <div class="col">
       <label for="aniadirNombreTemario">Nombre del temario</label>

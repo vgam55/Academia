@@ -1,5 +1,7 @@
 <div id="aniadir">
-		<form style="display:inline">
+		""<form action="{{url('/aniadirHoras') }}" method="POST" class="aniadirForm" id="horas"name="horas" style="display:inline">
+			{{ csrf_field() }}
+       		 {{ method_field('POST') }}
 	   	<h3>Añadir Horas</h3>
 	 	<label for="aniadiNombreHorario">Nombre</label>
 	   	<input type="text" id="aniadirNombreHorario" name="aniadirNombreHorario"></input>

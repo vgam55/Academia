@@ -1,5 +1,7 @@
 <div id="aniadir">
-		<form>
+		""<form  action="{{ url('/aniadirAlumnos')}}" method="POST" class="aniadirFom" name="alumnos">
+			{{ csrf_field() }}
+      		{{ method_field('POST') }}
 		    <h3>Añadir alumno</h3>
 		    <!-- fila 1-->
 		    <div class="row">

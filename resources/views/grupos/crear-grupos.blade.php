@@ -1,5 +1,5 @@
 <div id="aniadir">
-		<form style="display:inline">
+		<form action="{{url ('/aniadirGrupos') }}" method="POST" class="anidirForm" id="grupos" name="grupos" style="display:inline">
 		    <h3>Añadir Grupo</h3>
 		   	<label for="aniadirrNombre">Nombre del Grupo</label>
 		   	<input type="text" id="aniadirNombre" name="aniadirNombre"></input>

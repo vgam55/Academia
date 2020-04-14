@@ -1,5 +1,7 @@
  <div id="aniadir">
-		<form style="display:inline">
+		<form action="{{url('/aniadirUsuarios')}}" method="POST" class="aniadirForm" id="usuarios" name="usuarios" style="display:inline">
+			 {{ csrf_field() }}
+   			 {{ method_field('POST') }}
 		    <h3>Añadir Usuario</h3>
 		   	<label for="aniadirNombre">Nombre del Grupo</label>
 		   	<input type="text" id="aniadirNombre" name="aniadirNombre"></input>
