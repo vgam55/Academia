@@ -1,12 +1,12 @@
 /*Función para validar los datos que vienen del formulario para añadir nuevos temas para 
  dar en las clases.*/
+var correcto;
 function validarTemas()
 {
 	var correcto=true;
 	$('#temas').submit(function(event){
 		event.preventDefault();
 		var color=$('#aniadirTitulo').css('border-color');
-		alert(color);
 		var titulo=$('#aniadirTitulo').val();
 		var descripcion=$('#aniadirDescripcion').val();
 		var horas=$('#aniadirHoras').val();
@@ -80,7 +80,7 @@ $(function(){
 			case "temarios":
 				break;
 			case "temas":
-				validarTemas();
+				correcto=validarTemas();
 				break;
 			case "temarios":
 				break;
@@ -88,7 +88,9 @@ $(function(){
 				break;
 		}
 		/*Si todo es correcto, aquí es donde mandamos los datos para que sean guardados en la BD*/
-		$.ajax({
+		if (correcto)
+		{
+			$.ajax({
 			type: $(this).attr('method'),
 			data: $(this).serialize(),
 			url:  $(this).attr('action'),
@@ -102,7 +104,8 @@ $(function(){
 			{
 				alert('El error es '+error);
 			}
-	});
+			});
+		}
 		
 	});
 });

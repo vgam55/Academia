@@ -16,4 +16,27 @@ class AlumnosController extends Controller
     			->get();
     	return view('alumnos.mostrar-alumnos',['alumnos'=>$alumnos]);
     }
+
+    public function aniadirAlumno(Request $request)
+    {
+    	$resultado="El registro no pudo guardarse";
+    	$existe=""
+    	if($request->ajax())
+    	{
+    		$existe=$Alumno::where([ ['nombre','=',$request->input('aniadirNombre')],['apellidos','=',$request->input('aniadirApellidos')],['email','=',$aniadirEmail],['telefono','=',$request->input('aniadirTelefono')]])->get();
+    		if($existe="")
+    		{
+    			$alumno=new Alumno();
+    			$alumno->nombre=$request->input('aniadirNombre');
+    			$alumno->apellidos=$request->input('aniadirApellidos');
+    			$resultado='Registro insertado conrrectamente';
+    		}
+    		else
+    		{
+    			$resultado="El registro ya existe";
+    		}
+
+    	}
+    	return $resultado;
+    }
 }

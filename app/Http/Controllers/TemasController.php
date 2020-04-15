@@ -15,18 +15,31 @@ class TemasController extends Controller
 
    public function aniadirTema(Request $request)
    {
+      //$userRecord = Model::where([['email','=',$email],['password','=', $password]])->first();
+      $existe="";
+      $resultado='El registro no se pudo insertar';
       if($request->ajax())
       {
-   	 	$tema=new Tema();
-   		$tema->titulo =$request->input('aniadirTitulo');//$parametros["descripcion"];
-		   $tema->descripcion = $request->input('aniadirDescripcion');
-   		$tema->horas = (int)$request->input('aniadirHoras');
-         $tema->save();
+         $existe=Tema::where([['titulo','=',$request->input('aniadirTitulo')],['descripcion','=',$request->input('aniadirDescripcion')],['horas','=',(int)$request->input('aniadirHoras')]])->get();
+         if($existe="")
+         {
+            $tema=new Tema();
+            $tema->titulo =$request->input('aniadirTitulo');//$parametros["descripcion"];
+            $tema->descripcion = $request->input('aniadirDescripcion');
+            $tema->horas = (int)$request->input('aniadirHoras');
+            $tema->save();
+            $resultado='Registro insertado conrrectamente';
+         }
+         else
+         {
+            $resultado='El registro ya existe';
+         }
+   	 	
       }
 
    	 //  $temas=Tema::all();
 		//echo  "Número de horas: ".$tema->horas." Titulo: ".$tema->titulo." ".$tema->descripcion;
-    return 'Insertado correctamente';
+    return $resultado;
    }
 
 }

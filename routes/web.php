@@ -38,10 +38,10 @@ Route::get('/usuarios','UsersController@listarUsuarios');
 
 //Rutas para añadir nuevos registros
 Route::post('/aniadirAlumnos','AlumnosController@aniadirAlumno');
-Route::post('/aniadirTemas','TemasController@aniadirTema');
-Route::post('/aniadirCursos','CursosController@aniadirCurso');
-Route::post('/aniadirGrupos','GruposController@aniadirGrupos');
-Route::post('/aniadirHoras','HorasController@aniadirHoras');
-Route::post('/aniadirHorarios','HorariosController@aniadirHorario');
 Route::post('/aniadirClases','ClasesController@aniadirClase');
+Route::post('/aniadirCursos','CursosController@aniadirCurso');
+Route::post('/aniadirHorarios','HorariosController@aniadirHorario');
+Route::post('/aniadirHoras','HorasController@aniadirHoras');
+Route::post('/aniadirGrupos','GruposController@aniadirGrupos');
 Route::post('/aniadirTemarios','TemariosController@aniadirTemario');
+Route::post('/aniadirTemas','TemasController@aniadirTema');
