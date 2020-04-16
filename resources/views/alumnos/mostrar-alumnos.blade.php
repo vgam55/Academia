@@ -36,7 +36,12 @@
 			    </div>
 			    <div class="col">
 				   	<label for="filtrarGrupo">Grupo</label>
-				   	<input type="text" id="filtrarGrupo"></input>
+				   <select class="form-control" id="filtrarGrupo" name="filtrarGrupo">
+       				  <option>Elije un grupo</option>
+        				 @foreach($grupos as $grupo)
+          					 <option value="{{$grupo->id_grupo}}">{{$grupo->nombre_grupo}}</option>
+         				 @endforeach
+                    </select>
 			    </div>
 		   </div>
 		   <div class="row">

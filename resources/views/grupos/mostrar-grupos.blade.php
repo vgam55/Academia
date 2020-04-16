@@ -35,7 +35,7 @@
       @foreach($grupos as $grupo)
 	   <tbody>
      		<tr>
-			      <th scope="row">{{$grupo->id}}</th>
+			      <th scope="row">{{$grupo->id_grupo}}</th>
 			      <td><a href="#">{{$grupo->nombre_grupo}}</a></td>
 			      <td>{{$grupo->anio}}</td>
 			      <td>

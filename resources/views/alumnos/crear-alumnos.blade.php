@@ -1,5 +1,5 @@
 <div id="aniadir">
-		<form  action="{{ url('/aniadirAlumnos')}}" method="POST" class="aniadirFom" id="alumnos" name="alumnos">
+		<form  action="{{ url('/aniadirAlumnos')}}" method="POST" class="aniadirForm" id="alumnos" name="alumnos">
 			{{ csrf_field() }}
       		{{ method_field('POST') }}
 		    <h3>Añadir alumno</h3>
@@ -30,7 +30,12 @@
 			    </div>
 			    <div class="col">
 				   	<label for="aniadirGrupo">Grupo</label>
-				   	<input type="text" id="aniadirGrupo" name="aniadirGrupo"></input>
+				    <select class="form-control" id="aniadirGrupo" name="aniadirGrupo">
+       				  <option value="0">Elije un grupo</option>
+        				 @foreach($grupos as $grupo)
+          					 <option value="{{$grupo->id_grupo}}">{{$grupo->nombre_grupo}}</option>
+         				 @endforeach
+                    </select>
 			    </div>
 		   </div>
 		   <div class="row">

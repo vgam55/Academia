@@ -1,6 +1,9 @@
 /*Función para validar los datos que vienen del formulario para añadir nuevos temas para 
  dar en las clases.*/
-var correcto;
+var valido;
+
+/*Metodo para validar los datos que vienen de la parte de creación de un nuevo tema.
+  Los campos han de tener texto y ha de ser por lo menos de 5 caracteres*/
 function validarTemas()
 {
 	var correcto=true;
@@ -42,6 +45,85 @@ function validarTemas()
 	return correcto;
 }
 
+/*
+  Función para validar los datos que crearán el registro de un nuevo alumno
+  Todos los campos son obligatorios
+*/
+
+function validarAlumnos(event)
+{
+	var correcto=true;
+	var color=$('#aniadirNombre').css('border-color');
+	var nombre=$('#aniadirNombre');
+	var apellidos=$('#aniadirApellidos');
+	var email=$('#aniadirEmail');
+	var telefono=$('#aniadirTelefono');
+	var grupo=$('#aniadirGrupo');
+	var fecha=$('#aniadirFecha');
+	
+	if((nombre.val().length==0) || (nombre.val()==" "))
+	{
+		correcto=false;
+	    nombre.css('border-color','RED');
+	}
+	else
+	{
+		correcto=false;
+		nombre.css('border-color',color);
+	}
+
+	if((apellidos.val().length==0) || (apellidos.val==" "))
+	{
+		correcto=false;
+		apellidos.css('border-color','red');
+	}
+	else
+	{
+		apellidos.css('border-color',color);
+	}
+
+	if((email.length==0) || (email.val==" "))
+	{
+		correcto=false;
+		email.css('border-color','red');
+	}
+	else
+	{
+		email.css('border-color',color);
+	}
+
+    if((telefono.val().length==0)||(telefono.val()==" "))
+    {
+    	correcto=false;
+    	telefono.css('border-color','red');
+    }
+    else
+    {
+    	telefono.css('border-color',color)
+    }
+
+    if(grupo.val()==0)
+    {
+    	correcto=false;
+    	grupo.css('border-color','red');
+    }
+    else
+    {
+    	grupo.css('border-color', color);
+    }
+
+    if((fecha.val().length==0) || (fecha.val()==" "))
+    {
+    	correcto=false;
+    	fecha.css('border-color','red');
+    }
+	else
+	{
+		fecha.css('border-color',color);
+	}
+	return correcto;
+}
+
 $(function(){
 
 
@@ -64,6 +146,7 @@ $(function(){
 		switch (formulario)
 		{
 			case "alumnos":
+				valido=validarAlumnos();
 				break;
 			case "clases":
 				break;
@@ -80,7 +163,7 @@ $(function(){
 			case "temarios":
 				break;
 			case "temas":
-				correcto=validarTemas();
+				valido=validarTemas();
 				break;
 			case "temarios":
 				break;
@@ -88,7 +171,7 @@ $(function(){
 				break;
 		}
 		/*Si todo es correcto, aquí es donde mandamos los datos para que sean guardados en la BD*/
-		if (correcto)
+		if (valido)
 		{
 			$.ajax({
 			type: $(this).attr('method'),
