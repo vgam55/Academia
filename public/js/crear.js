@@ -2,56 +2,16 @@
  dar en las clases.*/
 var valido;
 
-/*Metodo para validar los datos que vienen de la parte de creación de un nuevo tema.
-  Los campos han de tener texto y ha de ser por lo menos de 5 caracteres*/
-function validarTemas()
-{
-	var correcto=true;
-	$('#temas').submit(function(event){
-		event.preventDefault();
-		var color=$('#aniadirTitulo').css('border-color');
-		var titulo=$('#aniadirTitulo').val();
-		var descripcion=$('#aniadirDescripcion').val();
-		var horas=$('#aniadirHoras').val();
-		if(titulo.length<5){ 
-			$('#aniadirTitulo').css('border-color','RED');
-			correcto=false;
-		}
-		else
-		{
-			$('#aniadirTitulo').css('border-color',color);
-		};
 
-		if(descripcion.length<5)
-		{
-			$('#aniadirDescripcion').css('border-color','RED');
-			correcto=false;
-		}
-		else
-		{
-			$('#aniadirDescripcion').css('border-color',color);
-		};
-		
-		if(horas.length==0) 
-		{
-			$('#aniadirHoras').css('border-color','RED');
-			correcto=false;
-		}
-		else
-		{
-			$('#aniadirHoras').css('border-color',color);
-		};
-	});
-	return correcto;
-}
 
 /*
   Función para validar los datos que crearán el registro de un nuevo alumno
   Todos los campos son obligatorios
 */
 
-function validarAlumnos(event)
+function validarAlumnos()
 {
+	event.preventDefault();
 	var correcto=true;
 	var color=$('#aniadirNombre').css('border-color');
 	var nombre=$('#aniadirNombre');
@@ -60,7 +20,7 @@ function validarAlumnos(event)
 	var telefono=$('#aniadirTelefono');
 	var grupo=$('#aniadirGrupo');
 	var fecha=$('#aniadirFecha');
-	
+
 	if((nombre.val().length==0) || (nombre.val()==" "))
 	{
 		correcto=false;
@@ -68,11 +28,9 @@ function validarAlumnos(event)
 	}
 	else
 	{
-		correcto=false;
 		nombre.css('border-color',color);
 	}
-
-	if((apellidos.val().length==0) || (apellidos.val==" "))
+	if((apellidos.val().length==0) || (apellidos.val()==" "))
 	{
 		correcto=false;
 		apellidos.css('border-color','red');
@@ -81,8 +39,7 @@ function validarAlumnos(event)
 	{
 		apellidos.css('border-color',color);
 	}
-
-	if((email.length==0) || (email.val==" "))
+	if((email.val().length==0) || (email.val()==" "))
 	{
 		correcto=false;
 		email.css('border-color','red');
@@ -91,7 +48,6 @@ function validarAlumnos(event)
 	{
 		email.css('border-color',color);
 	}
-
     if((telefono.val().length==0)||(telefono.val()==" "))
     {
     	correcto=false;
@@ -101,7 +57,6 @@ function validarAlumnos(event)
     {
     	telefono.css('border-color',color)
     }
-
     if(grupo.val()==0)
     {
     	correcto=false;
@@ -111,7 +66,6 @@ function validarAlumnos(event)
     {
     	grupo.css('border-color', color);
     }
-
     if((fecha.val().length==0) || (fecha.val()==" "))
     {
     	correcto=false;
@@ -125,8 +79,6 @@ function validarAlumnos(event)
 }
 
 $(function(){
-
-
 	$.ajaxSetup({
     headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

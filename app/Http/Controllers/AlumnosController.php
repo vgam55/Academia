@@ -23,23 +23,27 @@ class AlumnosController extends Controller
     public function aniadirAlumno(Request $request)
     {
     	$resultado="El registro no pudo guardarse";
-    	$existe="";
-    	if($request->ajax())
-    	{
-    		$existe=$Alumno::where([ ['nombre','=',$request->input('aniadirNombre')],['apellidos','=',$request->input('aniadirApellidos')],['email','=',$aniadirEmail],['telefono','=',$request->input('aniadirTelefono')]])->get();
-    		if($existe="")
-    		{
-    			$alumno=new Alumno();
-    			$alumno->nombre=$request->input('aniadirNombre');
-    			$alumno->apellidos=$request->input('aniadirApellidos');
-    			$resultado='Registro insertado conrrectamente';
-    		}
-    		else
-    		{
-    			$resultado="El registro ya existe";
-    		}
-
-    	}
-    	return $resultado;
+    	$existe="";    
+        if($request->ajax())
+        {
+            $existe=Alumno::where([ ['nombre','=',$request->input('aniadirNombre')], ['apellidos','=',$request->input('aniadirApellidos')], ['telefono','=',$request->input('aniadirTelefono')], ['email','=',$request->input('aniadirEmail')], ['id_grupo','=',$request->input('aniadirGrupo')] ])->get();
+            if(count($existe)==0)
+            {
+                $alumno=new Alumno();
+                $alumno->nombre=$request->input('aniadirNombre');
+                $alumno->apellidos=$request->input('aniadirApellidos');
+                $alumno->telefono=$request->input('aniadirTelefono');
+                $alumno->email=$request->input('aniadirEmail');
+                $alumno->id_grupo=$request->input('aniadirGrupo');
+                $alumno->fecha_nacimiento=$request->input('aniadirFecha');
+                $alumno->save();
+                $resultado='Registro insertado conrrectamente';
+            }
+            else
+            {
+                $resultado='El registro ya existia';
+            }
+        }
+      return $resultado;
     }
 }

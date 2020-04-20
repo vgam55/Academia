@@ -3,12 +3,17 @@
 			{{ csrf_field() }}
             {{ method_field('POST') }}
 		    <h3>Crear Clase</h3>
-		   	<label for="aniadirClases">Nombre de la Clase</label>
-		   	<input type="text" id="aniadirClases" name="aniadirClases"></input>
+		   	<label for="aniadirClase">Nombre de la Clase</label>
+		   	<input type="text" id="aniadirClase" name="aniadirClase"></input>
 		   	<label for="aniadirProfesor">Profesor</label>
 		   	<input type="text" id="aniadirProfesor" name="aniadirProfesor"></input>
 		   	<label for="aniadirGrupo">Grupo</label>
-		   	<input type="text" id="aniadirGrupo" name="aniadirGrupo"></input>
+		   	<select id="aniadirGrupo" name="aniadirGrupo">
+		   		<option value="0">Elige un grupo</option>
+		   		@foreach($grupos as $grupo)
+		   			<option value="{{$grupo->id_grupo}}">{{$grupo->nombre_grupo}}</option>
+		   		@endforeach
+		   	</select>
 		   	<button class="btn btn-success">Añadir</button>
 	  </form>
 </div>

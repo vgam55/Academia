@@ -21,7 +21,7 @@ class TemasController extends Controller
       if($request->ajax())
       {
          $existe=Tema::where([['titulo','=',$request->input('aniadirTitulo')],['descripcion','=',$request->input('aniadirDescripcion')],['horas','=',(int)$request->input('aniadirHoras')]])->get();
-         if($existe="")
+      if(count($existe)==0)
          {
             $tema=new Tema();
             $tema->titulo =$request->input('aniadirTitulo');//$parametros["descripcion"];
@@ -37,9 +37,9 @@ class TemasController extends Controller
    	 	
       }
 
-   	 //  $temas=Tema::all();
+   //  $temas=Tema::all();
 		//echo  "Número de horas: ".$tema->horas." Titulo: ".$tema->titulo." ".$tema->descripcion;
-    return $resultado;
+  return $resultado;
    }
 
 }
