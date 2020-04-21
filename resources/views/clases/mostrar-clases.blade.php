@@ -60,4 +60,5 @@
 
 @section('js')
 	<script src="{{asset('js/mAniadir.js')}}"></script>
+	<script src="{{asset('js/crear.js')}}"></script>
 @endsection

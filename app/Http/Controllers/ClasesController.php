@@ -21,13 +21,13 @@ class ClasesController extends Controller
                                          'grupos'=>$grupos]);
     }
 
-    public function aniadirClases(Request $request)
+    public function aniadirClase(Request $request)
     {
         $resultado="El registro no pudo guardarse";
         $existe="";    
         if($request->ajax())
         {
-            $existe=Alumno::where([ ['nombre_clase','=',$request->input('aniadirClase')], ['id_profesor','=',$request->input('aniadirProfesor')], ['id_grupo','=',$request->input('aniadirGrupo')] ])->get();
+            $existe=Clase::where([ ['nombre_clase','=',$request->input('aniadirClase')], ['id_profesor','=',$request->input('aniadirProfesor')], ['id_grupo','=',$request->input('aniadirGrupo')] ])->get();
             if(count($existe)==0)
             {
                 $clase=new Clase();

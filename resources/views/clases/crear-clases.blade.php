@@ -1,5 +1,5 @@
 <div id="aniadir">
-	<form action="/aniadirClases" method="POST" class="aniadirForm" id="clases" name="clases" style="display:inline">
+	<form action="{{url('/aniadirClases')}}" method="POST" class="aniadirForm" id="clases" name="clases" style="display:inline">
 			{{ csrf_field() }}
             {{ method_field('POST') }}
 		    <h3>Crear Clase</h3>

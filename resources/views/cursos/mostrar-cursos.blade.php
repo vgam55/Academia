@@ -10,12 +10,34 @@
 	<div id="filtrar">
 		<form style="display:inline">
 	   	<h3>Filtrar Cursos</h3>
+	   	<label for="filtrarCursos">Curso</label>
+	   	<select>
+	   		<option value="0">Elije un curso</option>
+	   		@foreach($cursos as $curso)
+	   			<option>{{$curso->nombre_curso}}</option>
+	   		@endforeach
+	   	</select>
 	 	<label for="filtrarClase">Clase</label>
-	   	<input type="text" id="filtrarClase"></input>
+	 	<select id="filtrarClase" name="filtrarClase">
+	 		<option value="0">Elije una clase</option>
+	 		@foreach($clases as $clase)
+	 			<option value="{{$clase->id}}">{{$clase->nombre_clase}}</option>
+	 		@endforeach
+	 	</select>
 	   	<label for="filtrarTemario">Temario</label>
-	   	<input type="text" id="filtrarTemario"></input>
+	   	<select id="filtrarTemario" name="filtrarTemario">
+	 		<option value="0">Elije una temario</option>
+	 		@foreach($temarios as $temario)
+	 			<option value="{{$temario->id}}">{{$temario->nombre_temario}}</option>
+	 		@endforeach
+	 	</select>
 	   	<label for="filtrarHorario">Horario</label>
-	   	<input type="text" id="filtrarHorario"></input>
+	   	<select id="filtrarHorario" name="filtrarHorario">
+	 		<option value="0">Elije un horario</option>
+	 		@foreach($horarios as $horario)
+	 			<option value="{{$horario->id}}">{{$horario->nombre_temario}}</option>
+	 		@endforeach
+	 	</select>
 	   	<button class="btn btn-warning">Filtrar</button>
 	   </form>
 	</div>
@@ -26,6 +48,7 @@
 	  <thead class="thead-dark">
 	    <tr>
 	      <th scope="col">#</th>
+	      <th scope="col">Curso</th>
 	      <th scope="col">Clase</th>
 	      <th scope="col">Temario</th>
 	      <th scope="col">Horarios</th>
@@ -36,6 +59,7 @@
 	   <tbody>
      		<tr>
 			      <th scope="row">{{$curso->id}}</th>
+			      <td>{{$curso->nombre_curso}}</td>
 			      <td><a href="#">{{$curso->nombre_clase}}</a>  </td>
 			      <td><a href="#">{{$curso->nombre_temario}}</a></td>
 			      <td><a href="#">{{$curso->nombre_horario}}</a></td>	
@@ -61,4 +85,5 @@
 
 @section('js')
 	<script src="{{asset('js/mAniadir.js')}}"></script>
+	<script src="{{asset('js/crear.js')}}"></script>
 @endsection

@@ -1,9 +1,10 @@
-/*Función para validar los datos que vienen del formulario para añadir nuevos temas para 
- dar en las clases.*/
+/*
+   Los métodos con el nombre validarXXX validan los datos que llegan de los distintos métodos
+   usados para crear un nuevo registro en la tabla correspondiente.
+   Las validaciones que se han creado son  ejemplos de lo que se puede validar, aunque proba-
+   blemente las habrá mejores.
+   */
 var valido;
-
-
-
 /*
   Función para validar los datos que crearán el registro de un nuevo alumno
   Todos los campos son obligatorios
@@ -78,6 +79,148 @@ function validarAlumnos()
 	return correcto;
 }
 
+/*
+   Método para validar los datos que vienen de la parte de creación de una nueva clase.
+   Los campos han de tener un valor distinto del inicial del tipo correcto (aniadirProfesor ha de ser
+   númerico y mayor que cero)
+ */
+ function validarClases()
+ {
+ 	event.preventDefault();
+ 	var correcto=true;
+ 	var color=$('#aniadirClase').css('border-color')
+ 	var nombreClase=$('#aniadirClase');
+ 	var profesor=$('#aniadirProfesor');
+ 	var grupo=$('#aniadirGrupo');
+
+ 	if(nombreClase.val().length<4)
+ 	{
+ 		correcto=false;
+ 		nombreClase.css('border-color','red');
+ 	}
+ 	else
+ 	{
+ 		nombreClase.css('border-color',color);
+ 	}
+
+ 	if(profesor.val().length==0)
+ 	{
+ 		correcto=false;
+ 		profesor.css('border-color','red');
+ 	}
+ 	else
+ 	{
+ 		profesor.css('border-color',color);
+ 	}
+ 	if(parseInt(grupo.val())==0)
+ 	{
+ 		correcto=false;
+ 		grupo.css('border-color','red');
+ 	}
+ 	else
+ 	{
+ 		grupo.css('border-color',color);
+ 	}
+ 	return correcto;
+ }
+
+
+/*
+  Método para validar los datos que deberian venir de crear-cursos para crear un nuevo
+  curso
+ */
+function validarCursos()
+{
+	event.preventDefault();
+	var correcto=true;
+	var curso=$('#aniadirCurso');
+	var clase=$('#aniadirClase');
+	var temario=$('#aniadirTemario');
+	var horario=$('#aniadirHorario');
+	var color=curso.css('border-color');
+	if(curso.val().length==0)
+	{
+		correcto=false;
+		curso.css('border-color', 'red');
+	}
+	else
+	{
+		curso.css('border-color',color);
+	}
+
+	if(clase.val().length==0)
+	{
+		correcto=false;
+		clase.css('border-color','red');
+	}
+	else
+	{
+		clase.css('border-color',color);
+	}
+
+	if(temario.val().length==0)
+	{
+		correcto=false;
+		temario.css('border-color','red');
+	}
+	else
+	{
+		temario.css('border-color',color);
+	}
+
+	if(horario.val().length==0)
+	{
+		correcto=false;
+		horario.css('border-color','red');
+	}
+	else
+	{
+		temario.css('border-color',color);
+	}
+	return correcto;
+}
+/*Metodo para validar los datos que vienen de la parte de creación de un nuevo tema.
+  Los campos han de tener texto y ha de ser por lo menos de 5 caracteres*/
+function validarTemas()
+{
+	event.preventDefault();
+	var correcto=true;
+	
+		var color=$('#aniadirTitulo').css('border-color');
+		var titulo=$('#aniadirTitulo').val();
+		var descripcion=$('#aniadirDescripcion').val();
+		var horas=$('#aniadirHoras').val();
+		if(titulo.length<5){ 
+			$('#aniadirTitulo').css('border-color','RED');
+			correcto=false;
+		}
+		else
+		{
+			$('#aniadirTitulo').css('border-color',color);
+		};
+
+		if(descripcion.length<5)
+		{
+			$('#aniadirDescripcion').css('border-color','RED');
+			correcto=false;
+		}
+		else
+		{
+			$('#aniadirDescripcion').css('border-color',color);
+		};
+		
+		if(horas.length==0) 
+		{
+			$('#aniadirHoras').css('border-color','RED');
+			correcto=false;
+		}
+		else
+		{
+			$('#aniadirHoras').css('border-color',color);
+		};
+	return correcto;
+}
+
 $(function(){
 	$.ajaxSetup({
     headers: {
@@ -101,8 +244,10 @@ $(function(){
 				valido=validarAlumnos();
 				break;
 			case "clases":
+				valido=validarClases();
 				break;
 			case "cursos":
+				valido=validarCursos();
 				break;
 			case "grupos":
 				break;
