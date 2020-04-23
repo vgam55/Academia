@@ -148,7 +148,7 @@ function validarCursos()
 		curso.css('border-color',color);
 	}
 
-	if(clase.val().length==0)
+	if(clase.val()==0)
 	{
 		correcto=false;
 		clase.css('border-color','red');
@@ -158,7 +158,7 @@ function validarCursos()
 		clase.css('border-color',color);
 	}
 
-	if(temario.val().length==0)
+	if(temario.val()==0)
 	{
 		correcto=false;
 		temario.css('border-color','red');
@@ -168,14 +168,43 @@ function validarCursos()
 		temario.css('border-color',color);
 	}
 
-	if(horario.val().length==0)
+	if(horario.val()==0)
 	{
 		correcto=false;
 		horario.css('border-color','red');
 	}
 	else
 	{
-		temario.css('border-color',color);
+		horario.css('border-color',color);
+	}
+	return correcto;
+}
+
+function validarGrupos()
+{
+	event.preventDefault();
+	var correcto=true;
+	var nombre=$('#aniadirNombre');
+	var fecha=$('#aniadirFecha');
+	var color=nombre.css('border-color');
+	if(nombre.val().length==0)
+	{
+		correcto=false;
+		nombre.css('border-color','red');
+	}
+	else
+	{
+		nombre.css('border-color',color);
+	}
+
+	if(fecha.val().length==0)
+	{
+		correcto=false;
+		fecha.css('border-color','red');
+	}
+	else
+	{
+		fecha.css('border-color',color)
 	}
 	return correcto;
 }
@@ -250,6 +279,7 @@ $(function(){
 				valido=validarCursos();
 				break;
 			case "grupos":
+				valido=validarGrupos();
 				break;
 			case "horarios":
 				break;

@@ -6,7 +6,6 @@
 		<div>
 		<i class='iconos fas fa-users' style="color:black"></i><h2 class=' d-inline-block align-middle mr-2' >GRUPOS </h2>
 		<button class="btn btn-primary btnAniadir"><i class='fas fa-plus'></i>  Crear Grupo</button>
-		<
    <!-- -->
     
 	<!-- Generamos una tabla para visualizar los grupos y poder borrar o modificarlos -->
@@ -59,4 +58,5 @@
 
 @section('js')
 	<script src="{{asset('js/mAniadir.js')}}"></script>
+	<script src="{{asset('js/crear.js')}}"></script>
 @endsection

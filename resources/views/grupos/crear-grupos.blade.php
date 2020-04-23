@@ -1,7 +1,9 @@
 <div id="aniadir">
-		<form action="{{url ('/aniadirGrupos') }}" method="POST" class="anidirForm" id="grupos" name="grupos" style="display:inline">
+		<form action="{{url ('/aniadirGrupos') }}" method="POST" class="aniadirForm" id="grupos" name="grupos" style="display:inline">
+			{{ csrf_field() }}
+      		{{ method_field('POST') }}
 		    <h3>Añadir Grupo</h3>
-		   	<label for="aniadirrNombre">Nombre del Grupo</label>
+		   	<label for="aniadirNombre">Nombre del Grupo</label>
 		   	<input type="text" id="aniadirNombre" name="aniadirNombre"></input>
 		   	<label for="aniadirFecha">Año</label>
 		   	<input type="date" id="aniadirFecha" name="aniadirFecha"></input>

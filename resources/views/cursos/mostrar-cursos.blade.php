@@ -35,7 +35,7 @@
 	   	<select id="filtrarHorario" name="filtrarHorario">
 	 		<option value="0">Elije un horario</option>
 	 		@foreach($horarios as $horario)
-	 			<option value="{{$horario->id}}">{{$horario->nombre_temario}}</option>
+	 			<option value="{{$horario->id}}">{{$horario->nombre_horario}}</option>
 	 		@endforeach
 	 	</select>
 	   	<button class="btn btn-warning">Filtrar</button>
