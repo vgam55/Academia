@@ -208,6 +208,76 @@ function validarGrupos()
 	}
 	return correcto;
 }
+/*
+ Metodo para validar los datos del formulario que crea un nuevo horario.
+ Para ser validos han de tener un contenido diferente al inicial.
+ */
+function validarHorarios()
+{
+	event.preventDefault();
+	var correcto=true;
+	var color=$('#aniadirNombreHorario').css('border-color');
+
+	if($('#aniadirNombreHorario').val().length==0)
+	{
+		correcto=false;
+		$('#aniadirNombreHorario').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirNombreHorario').css('border-color',color);
+	}
+
+	if($('#aniadirHora1').val()==0)
+	{
+		correcto=false;
+		$('#aniadirHora1').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirHora1').css('border-color',color);
+	}
+
+	if($('#aniadirHora2').val()==0)
+	{
+		correcto=false;
+		$('#aniadirHora2').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirHora2').css('border-color',color);
+	}
+
+	if($('#aniadirHora3').val()==0)
+	{
+		correcto=false;
+		$('#aniadirHora3').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirHora3').css('border-color',color);
+	}
+
+	if($('#aniadirHora4').val()==0)
+		{
+			correcto=false;
+			$('#aniadirHora4').css('border-color','red');
+		}
+		else
+		{
+			$('#aniadirHora4').css('border-color',color);
+		}
+	if($('#aniadirHora5').val()==0)
+		{
+			correcto=false;
+			$('#aniadirHora5').css('border-color','red');
+		}
+		else
+		{
+			$('#aniadirHora5').css('border-color',color);
+		}
+	return correcto;
+}
 /*Metodo para validar los datos que vienen de la parte de creación de un nuevo tema.
   Los campos han de tener texto y ha de ser por lo menos de 5 caracteres*/
 function validarTemas()
@@ -282,6 +352,7 @@ $(function(){
 				valido=validarGrupos();
 				break;
 			case "horarios":
+				valido=validarHorarios();
 				break;
 			case "horas":
 			   break;

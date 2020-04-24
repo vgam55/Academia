@@ -8,6 +8,8 @@
 	 @include('horarios.crear-horarios')
 	<div id="filtrar">
 		<form style="display:inline">
+			{{ csrf_field() }}
+      		{{ method_field('POST') }}
 	   	<h3>Filtrar Horarios</h3>
 	 	<label for="filtrarNombreHorario">Nombre</label>
 	   	<input type="text" id="filtrarNombreHorario"></input>
@@ -63,4 +65,5 @@
 
 @section('js')
 	<script src="{{asset('js/mAniadir.js')}}"></script>
+	<script src="{{asset('js/crear.js')}}"></script>
 @endsection
