@@ -9,8 +9,17 @@
 	<div id="filtrar">
 		<form style="display:inline">
 	   	<h3>Filtrar Horas</h3>
-	 	<label for="filtrarNombreHorario">Nombre</label>
-	   	<input type="text" id="filtrarNombreHorario"></input>
+	 	<label for="filtrarDia">Día</label>
+	   	<select id="filtrarDia" nombre="filtrarDia">
+	   		<option value="0">Elige un día</option>
+	   		<option value="Lunes">Lunes</option>
+	   		<option value="Martes">Martes</option>
+	   		<option value="Miercoles">Miercoles</option>
+	   		<option value="Jueves">Jueves</option>
+	   		<option value="Viernes">Viernes</option>
+	   		<option value="Sabado">Sabado</option>
+	   		<option value="Domingo">Domingo</option>
+	   	</select>
 	   	<label for="filtrarHoraIni">Hora Inicio</label>
 	   	<input type="time" id="filtrarHoraIni"></input>
 	   	<label for="filtrarHoraFin">Hora Inicio</label>
@@ -59,4 +68,5 @@
 
 @section('js')
 	<script src="{{asset('js/mAniadir.js')}}"></script>
+	<script src="{{asset('js/crear.js')}}"></script>
 @endsection

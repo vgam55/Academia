@@ -278,6 +278,105 @@ function validarHorarios()
 		}
 	return correcto;
 }
+
+function validarHoras()
+{
+	event.preventDefault();
+	correcto=true;
+	color=$('#aniadirDia').css('border-color');
+	
+
+	if($('#aniadirDia').val()==0)
+	{
+		correcto=false;
+		$('#aniadirDia').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirDia').css('border-color', color);
+	};
+
+	if($('#aniadirHoraIni').val().length==0)
+	{
+		correcto=false;
+		$('#aniadirHoraIni').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirHoraIni').css('border-color', color);
+	};
+
+	if($('#aniadirHoraFin').val().length==0)
+	{
+		correcto=false;
+		$('#aniadirHoraFin').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirHoraFin').css('border-color',color);
+	};
+
+	return correcto;
+}
+
+function validarProfesores()
+{
+	event.preventDefault();
+	var correcto=true;
+	var color=$('#aniadirNombre').css('border-color');
+    alert('Método validarProfesores');
+	if($('#aniadirNombre').val().length==0)
+	{
+		correcto=false;
+		$('#aniadirNombre').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirNombre').css('border-color',color);
+	}
+
+	if($('#aniadirApellidos').val().length==0)
+	{
+		correcto=false;
+		$('#aniadirApellidos').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirApellidos').css('border-color',color);
+	}
+
+	if($('#aniadirEmail').val().length==0)
+	{
+		correcto=false;
+		$('#aniadirEmail').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirEmail').css('border-color',color);
+	}
+
+	if($('#aniadirTelefono').val().length==0)
+	{
+		correcto=false;
+		$('#aniadirTelefono').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirTelefono').css('border-color',color);
+	}
+
+	if($('#aniadirTitulo').val().length==0)
+	{
+		correcto=false;
+		$('#aniadirTitulo').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirTitulo').css('border-color',color);
+	}
+	//return correcto;
+}
+
 /*Metodo para validar los datos que vienen de la parte de creación de un nuevo tema.
   Los campos han de tener texto y ha de ser por lo menos de 5 caracteres*/
 function validarTemas()
@@ -317,6 +416,7 @@ function validarTemas()
 		{
 			$('#aniadirHoras').css('border-color',color);
 		};
+		
 	return correcto;
 }
 
@@ -355,8 +455,10 @@ $(function(){
 				valido=validarHorarios();
 				break;
 			case "horas":
-			   break;
+				valido=validarHoras();
+			   	break;
 			case "profesores":
+				valido=validarProfesores();
 				break;
 			case "temarios":
 				break;

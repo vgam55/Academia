@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Profesor;
+use App\User;
+
 class ProfesoresController extends Controller
 {
     public function listarProfesores()
@@ -17,6 +20,9 @@ class ProfesoresController extends Controller
 
     public function aniadirProfesores()
     {
-    	
+        $resultado="No se pudo guardar el registro";
+    	$existe="";
+        
+        return $resultado;
     }
 }

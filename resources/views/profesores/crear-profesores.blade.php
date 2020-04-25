@@ -1,5 +1,5 @@
 <div id="aniadir">
-	<form action="{{ url('/aniadirProfesores') }}" style="display:inline">
+	<form action="{{ url('/aniadirProfesores') }}" class="aniadirForm" id="profesores" name="profesores" style="display:inline">
 			{{ csrf_field() }}
             {{ method_field('POST') }}
 		    <h3>Añadir profesor</h3>
