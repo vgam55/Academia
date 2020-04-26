@@ -43,5 +43,6 @@ Route::post('/aniadirCursos','CursosController@aniadirCurso');
 Route::post('/aniadirGrupos','GruposController@aniadirGrupos');
 Route::post('/aniadirHorarios','HorariosController@aniadirHorario');
 Route::post('/aniadirHoras','HorasController@aniadirHoras');
+Route::post('/aniadirProfesores','ProfesoresController@aniadirProfesores');
 Route::post('/aniadirTemarios','TemariosController@aniadirTemario');
 Route::post('/aniadirTemas','TemasController@aniadirTema');

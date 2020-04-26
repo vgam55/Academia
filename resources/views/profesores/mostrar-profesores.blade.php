@@ -61,8 +61,9 @@
 		</tbody>
 	  @endforeach
 	  </table>	
-
 	</div>
+
+
 @endsection
 
 @section('js')

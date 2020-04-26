@@ -324,7 +324,7 @@ function validarProfesores()
 	event.preventDefault();
 	var correcto=true;
 	var color=$('#aniadirNombre').css('border-color');
-    alert('Método validarProfesores');
+  
 	if($('#aniadirNombre').val().length==0)
 	{
 		correcto=false;
@@ -374,7 +374,7 @@ function validarProfesores()
 	{
 		$('#aniadirTitulo').css('border-color',color);
 	}
-	//return correcto;
+	return correcto;
 }
 
 /*Metodo para validar los datos que vienen de la parte de creación de un nuevo tema.
