@@ -377,6 +377,174 @@ function validarProfesores()
 	return correcto;
 }
 
+function validarTemarios()
+{
+	event.preventDefault();
+
+	var correcto=true;
+	var color=$('#aniadirNombreTemario').css('border-color');
+
+	if($('#aniadirNombreTemario').val().length==0)
+	{
+		$('#aniadirNombreTemario').css('border-color','red');
+		correcto=false;
+	}
+	else
+	{
+		$('#aniadirNombreTemario').css('border-color',color);
+	}
+
+	if($('#aniadirTema1').val()==0)
+	{
+		correcto=false;
+		$('#aniadirTema1').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirTema1').css('border-color',color);
+	}
+
+	if($('#aniadirTema2').val()==0)
+	{
+		correcto=false;
+		$('#aniadirTema2').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirTema2').css('border-color',color);
+	}
+
+	if($('#aniadirTema3').val()==0)
+	{
+		correcto=false;
+		$('#aniadirTema3').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirTema3').css('border-color',color);
+	}
+
+	if($('#aniadirTema4').val()==0)
+	{
+		correcto=false;
+		$('#aniadirTema4').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirTema4').css('border-color',color);
+	}
+
+	if($('#aniadirTema5').val()==0)
+	{
+		correcto=false;
+		$('#aniadirTema5').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirTema5').css('border-color',color);
+	}
+	
+	if($('#aniadirTema6').val()==0)
+	{
+		correcto=false;
+		$('#aniadirTema6').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirTema6').css('border-color',color);
+	}
+
+	if($('#aniadirTema7').val()==0)
+	{
+		correcto=false;
+		$('#aniadirTema7').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirTema8').css('border-color',color);
+	}
+
+	if($('#aniadirTema7').val()==0)
+	{
+		correcto=false;
+		$('#aniadirTema8').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirTema8').css('border-color',color);
+	}
+	
+	if($('#aniadirTema9').val()==0)
+	{
+		correcto=false;
+		$('#aniadirTema9').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirTema9').css('border-color',color);
+	}
+
+	if($('#aniadirTema10').val()==0)
+	{
+		correcto=false;
+		$('#aniadirTema10').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirTema10').css('border-color',color);
+	}
+
+	if($('#aniadirTema11').val()==0)
+	{
+		correcto=false;
+		$('#aniadirTema11').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirTema11').css('border-color',color);
+	}
+	
+	if($('#aniadirTema12').val()==0)
+	{
+		correcto=false;
+		$('#aniadirTema12').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirTema12').css('border-color',color);
+	}
+
+	if($('#aniadirTema13').val()==0)
+	{
+		correcto=false;
+		$('#aniadirTema13').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirTema13').css('border-color',color);
+	}
+
+	if($('#aniadirTema14').val()==0)
+	{
+		correcto=false;
+		$('#aniadirTema14').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirTema14').css('border-color',color);
+	}
+	
+	if($('#aniadirTema15').val()==0)
+	{
+		correcto=false;
+		$('#aniadirTema15').css('border-color','red');
+	}
+	else
+	{
+		$('#aniadirTema15').css('border-color',color);
+	}
+	return correcto;
+}
 /*Metodo para validar los datos que vienen de la parte de creación de un nuevo tema.
   Los campos han de tener texto y ha de ser por lo menos de 5 caracteres*/
 function validarTemas()
@@ -461,6 +629,7 @@ $(function(){
 				valido=validarProfesores();
 				break;
 			case "temarios":
+				valido=validarTemarios();
 				break;
 			case "temas":
 				valido=validarTemas();
