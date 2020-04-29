@@ -16,11 +16,11 @@ class CreateClasesTable extends Migration
         Schema::create('clases', function (Blueprint $table) {
             $table->Increments('id');
             $table->String('nombre_clase');
-            $table->integer('id_profesor')->unsigned();
-            $table->integer('id_grupo')->unsigned();
+            $table->integer('id_profesor')->unsigned()->nullable();
+            $table->integer('id_grupo')->unsigned()->nullable();
             $table->timestamps();
-            $table->foreign('id_profesor')->references('id')->on('profesores');
-            $table->foreign('id_grupo')->references('id')->on('grupos');
+            $table->foreign('id_profesor')->references('id')->on('profesores')->onDelete('set null');
+            $table->foreign('id_grupo')->references('id_grupo')->on('grupos')->onDelete('set null');
         });
     }
 

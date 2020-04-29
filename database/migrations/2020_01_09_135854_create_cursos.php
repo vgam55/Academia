@@ -16,14 +16,16 @@ class CreateCursos extends Migration
         Schema::create('cursos', function (Blueprint $table) {
             $table->Increments('id');
             $table->String('nombre_curso');
-            $table->integer('id_clase')->unsigned();
-            $table->integer('id_temario')->unsigned();
-            $table->integer('id_horario')->unsigned();
+            $table->integer('id_clase')->unsigned()->nullable();
+            $table->integer('id_temario')->unsigned()->nullable();
+            $table->integer('id_horario')->unsigned()->nullable();
             $table->timestamps();
-            $table->foreign('id_clase')->references('id')->on('clases');
-            $table->foreign('id_temario')->references('id')->on('temarios');
-            $table->foreign('id_horario')->references('id')->on('horarios');
+         $table->foreign('id_clase')->references('id')->on('clases')->onDelete('set null');
+         $table->foreign('id_temario')->references('id')->on('temarios')->onDelete('set null');
+         $table->foreign('id_horario')->references('id')->on('horarios')->onDelete('set null');
         });
+       
+    
     }
 
     /**

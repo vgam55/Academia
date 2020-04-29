@@ -17,11 +17,10 @@ class CreateProfesoresTable extends Migration
             $table->Increments('id');
             //$table->integer('tema_15')->unsigned();
             //$table->foreign('tema_1')->references('id')->on('temas');
-            $table->integer('id_user')->unsigned();
+            $table->integer('id_user')->unsigned()->nullable();
             $table->string('titulo');
             $table->timestamps();
-            $table->foreign('id_user')->references('id')->on('users');
-          //  $table->foreign('id_user')->references('id')->on('users');
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('set null');
         });
     }
 

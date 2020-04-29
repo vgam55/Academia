@@ -16,17 +16,17 @@ class CreateHorariosTable extends Migration
         Schema::create('horarios', function (Blueprint $table) {
             $table->Increments('id');
             $table->String('nombre_horario');
-            $table->integer('hora1')->unsigned();
-            $table->integer('hora2')->unsigned();
-            $table->integer('hora3')->unsigned();
-            $table->integer('hora4')->unsigned();
-            $table->integer('hora5')->unsigned();
+            $table->integer('hora1')->unsigned()->nullable();
+            $table->integer('hora2')->unsigned()->nullable();
+            $table->integer('hora3')->unsigned()->nullable();
+            $table->integer('hora4')->unsigned()->nullable();
+            $table->integer('hora5')->unsigned()->nullable();
             $table->timestamps();
-            $table->foreign('hora1')->references('id')->on('horas');
-            $table->foreign('hora2')->references('id')->on('horas');
-            $table->foreign('hora3')->references('id')->on('horas');
-            $table->foreign('hora4')->references('id')->on('horas');
-            $table->foreign('hora5')->references('id')->on('horas');
+            $table->foreign('hora1')->references('id')->on('horas')->onDelete('set null');
+            $table->foreign('hora2')->references('id')->on('horas')->onDelete('set null');
+            $table->foreign('hora3')->references('id')->on('horas')->onDelete('set null');
+            $table->foreign('hora4')->references('id')->on('horas')->onDelete('set null');
+            $table->foreign('hora5')->references('id')->on('horas')->onDelete('set null');
         });
     }
 

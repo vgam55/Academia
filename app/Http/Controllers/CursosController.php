@@ -52,4 +52,17 @@ class CursosController extends Controller
         }
        return $resultado; 
     }
+
+    public function borrarCurso($id)
+    {
+        $resultado="No se pudo borrar el registro";
+        $curso=Curso::find($id);
+        $borrado=$curso->delete();
+        if($borrado>0)
+        {
+            $resultado="Registro borrado con exito";
+        }
+
+        return $resultado;
+    }
 }

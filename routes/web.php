@@ -46,3 +46,15 @@ Route::post('/aniadirHoras','HorasController@aniadirHoras');
 Route::post('/aniadirProfesores','ProfesoresController@aniadirProfesores');
 Route::post('/aniadirTemarios','TemariosController@aniadirTemario');
 Route::post('/aniadirTemas','TemasController@aniadirTema');
+
+//Rutas para borrar registros ya existentes
+
+Route::delete('/borrarAlumnos/{id}','AlumnosController@borrarAlumno');
+Route::delete('/borrarClases/{id}','ClasesController@borrarClase');
+Route::delete('/borrarCursos/{id}','CursosController@borrarCurso');
+Route::delete('/borrarGrupos/{id}','Controller@borrar');
+Route::delete('/borrarHorarios/{id}','HorariosController@borrar');
+Route::delete('/borrarHoras/{id}','HorasController@borrar');
+Route::delete('/borrarProfesores/{id}','ProfesoresController@borrar');
+Route::delete('/borrarTemarios/{id}','TemariosController@borrar');
+Route::delete('/borrarTemas/{id}','TemasController@borrar');

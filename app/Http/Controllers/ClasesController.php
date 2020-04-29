@@ -44,6 +44,19 @@ class ClasesController extends Controller
         }
       return $resultado;
     }
+
+    public function borrarClase($id)
+    {
+        $resultado="No se pudo borrar el registro";
+        $clase=Clase::find($id);
+        $borrado=$clase->delete();
+        if($borrado>0)
+        {
+            $resultado="Registro borrado con exito";
+        }
+
+        return $resultado;
+    }
 }
 
 

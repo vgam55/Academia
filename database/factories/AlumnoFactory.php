@@ -13,6 +13,6 @@ $factory->define(Alumno::class, function (Faker $faker) {
         'email'=>$faker->unique()->safeEmail,
         'telefono'=>$faker->PhoneNumber,
         'fecha_nacimiento'=>$faker->date(),
-        'id_grupo'=>Grupo::inRandomOrder()->value('id')?:factory(Grupo::class),
+        'id_grupo'=>Grupo::inRandomOrder()->value('id_grupo')?:factory(Grupo::class),
     ];
 });

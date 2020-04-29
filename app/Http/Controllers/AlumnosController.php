@@ -46,4 +46,16 @@ class AlumnosController extends Controller
         }
       return $resultado;
     }
+
+    public function borrarAlumno($id)
+    {
+        $resultado="No se pudo borrar el registro";
+        $alumno=Alumno::find($id);
+        $borrado=$alumno->delete();
+        if($borrado==1)
+        {
+            $resultado="Registro borrado con exito";
+        }
+        echo $resultado;
+    }
 }
