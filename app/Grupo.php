@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 use App\Grupo;
 class Grupo extends Model
 {
-    protected $primary_key ='id_grupo';
+    protected $primaryKey ='id_grupo';
 }

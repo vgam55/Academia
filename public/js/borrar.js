@@ -22,8 +22,7 @@ $(
 			{
 				alert('El error es '+error);
 			}
-			});
-		
+			});		
 		
 	});
 });

@@ -19,7 +19,6 @@ class GruposController extends Controller
     	$existe="";
     	if($request->ajax())
     	{
-    		$fecha=Carbon::parse($request->input('aniadirFecha'));
     		$existe=Grupo::where([['nombre_grupo','=',$request->input('aniadirNombre')], ['anio','=',$request->input('aniadirFecha')] ])->get();
     		if(count($existe)==0)
     		{
@@ -36,5 +35,17 @@ class GruposController extends Controller
     	}
 
     	return $resultado;
+    }
+
+    public function borrarGrupo($id)
+    {
+        $resultado="No se pudo borrar el grupo";
+        $grupo=Grupo::find($id);
+        $borrado=$grupo->delete();
+        if($borrado>0)
+        {
+            $resultado="Registro borrado con exito";
+        }
+        return $resultado;
     }
 }

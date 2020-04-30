@@ -45,6 +45,19 @@ class HorariosController extends Controller
                 $resultado="El registro no se guardo por que habia otro igual";
             }
         }
-        return $resultado." ".$request->input('aniadirHora1')." ".$request->input('aniadirHora2')." ".$request->input('aniadirHora3')." ".$request->input('aniadirHora4')." ".$request->input('aniadirHora5')." ".$existe;
+        return $resultado;
+    }
+
+    public function borrarHorario($id)
+    {
+        $resultado="No se pudo borrar el registro";
+        $horario=Horario::find($id);
+        $borrado=$horario->delete();
+        if($borrado>0)
+        {
+            $resultado="Registro borrado con exito";
+        }
+
+        return $resultado;
     }
 }

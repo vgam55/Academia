@@ -40,7 +40,7 @@
 			      <td>
 			      	<span class="btn btn-success"><i class='fa fa-eye' title='Más información' ></i></span> 
 			      	<span class="btn btn-info"><i class='fas fa-pencil-alt' title='Editar'></i></span>
-			      	<form action="{ {asset('/borrarGrupos/'.$grupo->id_grupo) }}" method="post" class="borrarForm"> 
+			      	<form action="{{asset('/borrarGrupos/'.$grupo->id_grupo) }}" method="post" class="borrarForm"> 
 						<button class="btn btn-danger" method="post" class="borrarForm" style="padding: 0; height: 40px; width: 40px; margin: 5px 2px;">
 							 @csrf
                              @method('DELETE')
@@ -59,5 +59,5 @@
 @section('js')
 	<script src="{{asset('js/mAniadir.js')}}"></script>
 	<script src="{{asset('js/crear.js')}}"></script>
-	 <script src="{{asset('js/borrar.js')}}"></script>
+	<script src="{{asset('js/borrar.js')}}"></script>
 @endsection

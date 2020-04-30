@@ -36,4 +36,16 @@ class HorasController extends Controller
    		}
     	return $resultado;
     }
+
+    public function borrarHora($id)
+    {
+        $resultado="No se pudo borrar el registro";
+        $hora=Hora::find($id);
+        $borrado=$hora->delete();
+        if($borrado>0)
+        {
+            $resultado="Registro borrado con exito";
+        }
+        return $resultado;
+    }
 }
