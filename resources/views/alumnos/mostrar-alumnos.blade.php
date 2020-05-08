@@ -77,7 +77,8 @@
 			      <td><a href="#">{{$alumno->nombre_grupo}}</a></td>
 			      <td>
 			      	<span class="btn btn-success"><i class='fa fa-eye' title='Más información' ></i></span> 
-			      	<span class="btn btn-info"><i class='fas fa-pencil-alt' title='Editar'></i></span>
+			      	<span class="btn btn-info"><i  class='btnEditar fas fa-pencil-alt' title='Editar'></i></span>
+			      	
 			      	<form action="{{asset('/borrarAlumnos/'.$alumno->id)}}" class="borrarForm" method="post" style="display:inline"> 
 						<button class="btn btn-danger" style="padding: 0; height: 40px; width: 40px; margin: 5px 2px;">
 							 @csrf
@@ -86,6 +87,9 @@
 						</button>
 			      	</form>
 			      </td>		
+	    		</tr>
+	    		<tr id="actualizar_alumno">
+	    			<td>@include('alumnos.actualizar-alumnos')</td>
 	    		</tr>
 		    </tbody>
 		@endforeach

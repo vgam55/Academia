@@ -48,7 +48,10 @@
 						</button>
 			      	</form>
 			      </td>			      
-	    	</tr>		 
+	    	</tr>		
+	    	<tr>
+	    		<td>@include('grupos.actualizar-grupo')</td>
+	    	</tr> 
 		</tbody>
 	  @endforeach
 	  </table>	

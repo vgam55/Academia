@@ -49,4 +49,16 @@ class ProfesoresController extends Controller
         } 
         return $resultado;
     }
+
+    public function borrarProfesor($id)
+    {
+        $resultado="No se pudo borrar el registro";
+        $profesor=Profesor::find($id);
+        $borrado=$profesor->delete();
+        if($borrado>0)
+        {
+            $resultado="Registro borrado con exito";
+        }
+        return $resultado;
+    }
 }

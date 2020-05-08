@@ -55,6 +55,17 @@ Route::delete('/borrarCursos/{id}','CursosController@borrarCurso');
 Route::delete('/borrarGrupos/{id}','GruposController@borrarGrupo');
 Route::delete('/borrarHorarios/{id}','HorariosController@borrarHorario');
 Route::delete('/borrarHoras/{id}','HorasController@borrarHora');
-Route::delete('/borrarProfesores/{id}','ProfesoresController@borrar');
+Route::delete('/borrarProfesores/{id}','ProfesoresController@borrarProfesor');
 Route::delete('/borrarTemarios/{id}','TemariosController@borrarTemario');
 Route::delete('/borrarTemas/{id}','TemasController@borrarTema');
+
+//Rutas para actualizar los registros
+Route::put('/actualizarAlumnos/{id}','AlumnosController@actualizarAlumno');
+Route::put('/actualizarClases/{id}','ClasesController@actualizarClase');
+Route::put('/actualizarCursos/{id}','CursosController@actualizarCurso');
+Route::put('/actualizarGrupos/{id}','GruposController@actualizarGrupo');
+Route::put('/actualizarHorarios/{id}','HorariosController@actualizarHorario');
+Route::put('/actualizarHoras/{id}','HorasController@actualizarHora');
+Route::put('/actualizarProfesores/{id}','ProfesoresController@actualizarProfesor');
+Route::put('/actualizarTemarios/{id}','TemariosController@actualizarTemario');
+Route::put('/actualizarTemas/{id}','TemasController@actualizarTema');

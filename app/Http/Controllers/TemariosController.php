@@ -51,5 +51,18 @@ class TemariosController extends Controller
     }
     	return $resultado;
     }
+
+    public function borrarTemario($id)
+    {
+        $resultado="El registro no pudo borrar";
+        $temario=Temario::find($id);
+        $borrado=$temario->delete();
+        if($borrado>0)
+        {
+            $resultado="Registro borrado con exito";
+        }
+
+        return $resultado;
+    }
 }
 

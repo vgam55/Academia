@@ -74,7 +74,10 @@
 						</button>
 			      	</form>
 			      </td>				      
-	    	</tr>		 
+	    	</tr>	
+	    	<tr>
+	    		<td>@include('cursos.actualizar-curso')</td>
+	    	</tr>	 
 		</tbody>
 	  @endforeach
 	  </table>	

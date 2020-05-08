@@ -65,4 +65,32 @@ class CursosController extends Controller
 
         return $resultado;
     }
+
+    public function actualizarCurso(Request $request, $id)
+    {
+        $resultado="El registro no se pudo actualizar";
+        $curso=Curso::find($id);
+        $curso->nombre_curso=$request->input('actualizarCurso');
+        if($request->input('actualizarClase')>0)
+        {
+            $curso->id_clase=$request->input('actualizarClase');
+        }
+
+        if($request->input('actualizarTemario')>0)
+        {
+            $curso->id_temario=$request->input('actualizarTemario');
+        }
+
+        if($request->input('actualizarTemario'))
+        {
+            $curso->id_horario=$request->input('actualizarHorario');
+        }
+        $total=$curso->save();
+
+        if($total>0)
+        {
+            $resultado="Registro actualizado con exito";
+        }
+        return $resultado;        
+    }
 }

@@ -1,12 +1,12 @@
-<div id="aniadir">
-	<form action="{{url('/aniadirClases')}}" method="POST" class="aniadirForm" id="clases" name="clases" style="display:inline">
+<div id="actualizar">
+	<form action="{{asset('/actualizarClases/'.$clase->id)}}" method="POST" class="actualizarForm" id="clases" name="clases" style="display:inline">
 			{{ csrf_field() }}
-            {{ method_field('POST') }}
-		    <h3>Crear Clase</h3>
-		   	<label for="aniadirClase">Nombre de la Clase</label>
-		   	<input type="text" id="aniadirClase" name="aniadirClase"></input>
-		   	<label for="aniadirProfesor">Profesor</label>
-		   	<select id="aniadirProfesor" name="aniadirProfesor">
+            {{ method_field('PUT') }}
+		    <h3>Actualizar Clase</h3>
+		   	<label for="actualizarClase">Nombre de la Clase</label>
+		   	<input type="text" id="actualizarClase" name="actualizarClase" value="{{ $clase->nombre_clase }}">
+		   	<label for="actualizarProfesor">Profesor</label>
+		   	<select id="actualizarProfesor" name="actualizarProfesor">
 		   		<option value="0">Elige un profesor</option>
 		   		@foreach($profesores as $profesor)
 		   			<option value="{{$profesor->id}}">{{$profesor->name}}</option>

@@ -42,4 +42,16 @@ class TemasController extends Controller
   return $resultado;
    }
 
+   public function borrarTema($id)
+   {
+      $resultado="No se pudo borrar el registro";
+      $tema=Tema::find($id);
+      $borrado=$tema->delete();
+      if($borrado>0)
+      {
+         $resultado="Registro borrado con exito";
+      }
+      return $resultado;
+   }
+
 }

@@ -48,4 +48,18 @@ class GruposController extends Controller
         }
         return $resultado;
     }
+
+    public function actualizarGrupo(Request $request, $id)
+    {
+        $resultado="No se pudo actualizar el registro";
+        $grupo=Grupo::find($id);
+        $grupo->nombre_grupo=$request->input('actualizarNombre');
+        $grupo->anio=$request->input('actualizarFecha');
+        $total=$grupo->save();
+        if($total>0)
+        {
+            $resultado="Registro actualizado con exito";
+        }
+        return $resultado;
+    }
 }

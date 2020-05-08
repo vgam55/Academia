@@ -58,4 +58,25 @@ class AlumnosController extends Controller
         }
         echo $resultado;
     }
+
+    public function actualizarAlumno(Request $request, $id)
+    {
+        $resultado="No se pudo actualizar los datos del alumno";
+        $alumno=Alumno::find($id);
+            $alumno->nombre=$request->input('actualizarNombre');
+            $alumno->apellidos= $request->input('actualizarApellidos');
+            $alumno->email= $request->input('actualizarEmail');
+            $alumno->telefono= $request->input('actualizarTelefono');
+            $alumno->fecha_nacimiento= $request->input('actualizarFecha');
+            if($request->input('actualizarGrupo')>0)
+                { 
+                    $alumno->id_grupo= $request->input('actualizarGrupo');
+                }
+           $total= $alumno->save();
+           if($total>0)
+           {
+            $resultado="Registro actualizado con exito";
+           }  
+        return $resultado;
+    }
 }

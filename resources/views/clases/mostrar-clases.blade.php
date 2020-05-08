@@ -49,7 +49,12 @@
 						</button>
 			      	</form>
 			      </td>				      
-	    	</tr>		 
+	    	</tr>	
+	    	<tr>
+	    		<td>
+	    			@include('clases.actualizar-clase')
+	    		</td>
+	    	</tr>	 
 		</tbody>
 	  @endforeach
 	  </table>	

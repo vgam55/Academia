@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Clase;
 use App\Grupo;
+use App\Profesor;
 use Illuminate\Support\Facades\DB;
 class ClasesController extends Controller
 {
@@ -17,8 +18,13 @@ class ClasesController extends Controller
     			->select('clases.id','clases.nombre_clase','grupos.nombre_grupo','grupos.id_grupo','users.name','users.apellidos','profesores.id_user')
     			->get();
         $grupos=Grupo::all();
+        $profesores=DB::table('profesores')
+                    ->join('users','profesores.id_user','=','users.id')
+                    ->select('users.name','users.apellidos','users.email','users.telephone','profesores.id','profesores.titulo')
+                    ->get();
   	return view('clases.mostrar-clases',['clases'=>$clases,
-                                         'grupos'=>$grupos]);
+                                         'grupos'=>$grupos,
+                                         'profesores'=>$profesores]);
     }
 
     public function aniadirClase(Request $request)
@@ -56,6 +62,29 @@ class ClasesController extends Controller
         }
 
         return $resultado;
+    }
+
+    public function actualizarClase(Request $request, $id)
+    {
+        $resultado="No se pudo actualizar el registro";
+        $clase=Clase::find($id);
+        $clase->nombre_clase=$request->input('actualizarClase');
+        if($request->input('actualizarGrupo')>0)
+        {
+            $clase->id_grupo=$request->input('actualizarGrupo');
+        }
+        
+        if($request->input('actualizarProfesor')>0)
+        {
+            $clase->id_profesor=$request->input('actualizarProfesor');
+        }
+        
+        $total=$clase->save();
+        if($total>0)
+        {
+             $resultado='Registro insertado conrrectamente';
+        }
+       return $resultado;
     }
 }
 
