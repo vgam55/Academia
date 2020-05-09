@@ -17,6 +17,4 @@
 		   	<input type="password" id="aniadirPassword" name="aniadirPassword">
 		   	<button class="btn btn-success">Añadir</button>
 	  </form>
-
-
-	</div>
+</div>

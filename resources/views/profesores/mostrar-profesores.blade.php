@@ -25,6 +25,7 @@
 	</div>
 	<div>
 	
+
 	<table class="table">
 	  <thead class="thead-dark">
 	    <tr>
@@ -57,7 +58,10 @@
 						</button>
 			      	</form>
 			      </td>				      
-	    	</tr>		 
+	    	</tr>
+	    	<tr>
+	    		<td>@include('profesores.actualizar-profesores')
+	    	</tr>	 
 		</tbody>
 	  @endforeach
 	  </table>	

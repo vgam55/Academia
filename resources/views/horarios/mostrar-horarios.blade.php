@@ -56,6 +56,9 @@
 			      	<span class="btn btn-succes"><i class='iconos fas fa-list' title="Mostrar Horarios"></i></span>
 			      </td>		
 	    		</tr>
+	    		<tr>
+	    			<td>@include('horarios.actualizar-horarios')</td>
+	    		</tr>
 		    </tbody>
 		@endforeach
 

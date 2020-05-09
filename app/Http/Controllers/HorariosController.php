@@ -60,4 +60,43 @@ class HorariosController extends Controller
 
         return $resultado;
     }
+    
+    public function actualizarHorario(Request $request, $id)
+    {
+        $resultado="No se pudo actualizar el registro";
+        $horario=Horario::find($id);
+        $horario->nombre_horario=$request->input('actualizarNombreHorario');
+        if($request->input('actualizarHora1')>0)
+        {
+            $horario->hora1=$request->input('actualizarHora1');
+        }
+
+        if($request->input('actualizarHora2')>0)
+        {
+            $horario->hora2=$request->input('actualizarHora2');
+        }
+
+        if($request->input('actualizarHora3')>0)
+        {
+            $horario->hora3=$request->input('actualizarHora3');
+        }
+
+        if($request->input('actualizarHora4')>0)
+        {
+            $horario->hora4=$request->input('actualizarHora4');
+        }
+
+        if($request->input('actualizarHora5')>0)
+        {
+            $horario->hora5=$request->input('actualizarHora5');
+        }
+
+        $actualizado=$horario->save();
+        if($actualizado>0)
+        {
+            $resultado="Registro actualizado con exito";
+        }
+
+        return $resultado;
+    }
 }

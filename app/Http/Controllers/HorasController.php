@@ -48,4 +48,29 @@ class HorasController extends Controller
         }
         return $resultado;
     }
+
+    public function actualizarHora(Request $request, $id)
+    {
+        $resultado="No se pudo actualizar el registro";
+        $hora=Hora::find($id);
+        if($request->input('actualizarDia')!="0")
+        {
+            $hora->dia=$request->input('actualizarDia');
+            $prueba=2;
+        }
+        if($request->input('actualizarHoraIni')!=0)
+        {
+            $hora->hora_ini=$request->input('actualizarHoraIni');
+        }
+        if($request->input('actualizarHoraFin')!=0)
+        {
+            $hora->hora_fin=$request->input('actualizarHoraFin');
+        }
+        $actualizado=$hora->save();
+        if($actualizado>0)
+        {
+            $resultado="Registro actualizado con exito";
+        }
+        return $resultado;
+    }
 }
