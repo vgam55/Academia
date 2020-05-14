@@ -33,14 +33,14 @@
 	  </thead>
       @foreach($clases as $clase)
 	   <tbody>
-	   		<tr>
+	   		<tr id="trFila">
 			      <th scope="row">{{$clase->id}}</th>
 			      <td>{{$clase->nombre_clase}}</td>
 			      <td>{{$clase->name}}  {{$clase->apellidos}}</td>
 			      <td><a href="#">{{$clase->nombre_grupo}}</a></td>	
-			      <td>
+			      <td id="tdAcciones">
 			      	<span class="btn btn-success"><i class='fa fa-eye' title='Más información' ></i></span> 
-			      	<span class="btn btn-info"><i class='fas fa-pencil-alt' title='Editar'></i></span>
+			      	<span class="btnEditar btn btn-info"><i class='fas fa-pencil-alt' title='Editar'></i></span>
 			      	<form action="{{asset('/borrarClases/'.$clase->id)}}" class="borrarForm" method="post"> 
 						<button class="btn btn-danger" style="padding: 0; height: 40px; width: 40px; margin: 5px 2px;">
 							 @csrf
@@ -50,8 +50,8 @@
 			      	</form>
 			      </td>				      
 	    	</tr>	
-	    	<tr>
-	    		<td>
+	    	<tr class="actualizar">
+	    		<td colspan="5" >
 	    			@include('clases.actualizar-clase')
 	    		</td>
 	    	</tr>	 
@@ -67,4 +67,5 @@
 	<script src="{{asset('js/mAniadir.js')}}"></script>
 	<script src="{{asset('js/crear.js')}}"></script>
 	<script src="{{asset('js/borrar.js')}}"></script>
+	<script src="{{asset('js/mActualizar.js')}}"></script>
 @endsection

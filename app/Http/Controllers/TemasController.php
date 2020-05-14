@@ -54,4 +54,19 @@ class TemasController extends Controller
       return $resultado;
    }
 
+   public function actualizarTema(Request $request, $id)
+   {
+      $resultado="No se pudo actualizar el registro";
+      $tema=Tema::find($id);
+      $tema->titulo=$request->input('actualizarTitulo');
+      $tema->descripcion=$request->input('actualizarDescripcion');
+      $tema->horas=$request->input('actualizarHoras');
+      $actualizado=$tema->save();
+      if($actualizado>0)
+      {
+         $resultado="Registro actualizado con exito";
+      }
+      return $resultado;
+   }
+
 }

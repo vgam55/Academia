@@ -64,5 +64,91 @@ class TemariosController extends Controller
 
         return $resultado;
     }
+
+    public function actualizarTemario(Request $request, $id)
+    {
+        $resultado="No se pudo actualizar el registro";
+        $temario=Temario::find($id);
+        $temario->nombre_temario=$request->input('actualizarNombreTemario');
+        if($request->input('actualizarTema1')>0)
+        {
+            $temario->tema_1=$request->input('actualizarTema1');
+        }
+
+         if($request->input('actualizarTema2')>0)
+        {
+            $temario->tema_2=$request->input('actualizarTema2');
+        }
+
+         if($request->input('actualizarTema3')>0)
+        {
+            $temario->tema_3=$request->input('actualizarTema3');
+        }
+
+         if($request->input('actualizarTema4')>0)
+        {
+            $temario->tema_4=$request->input('actualizarTema4');
+        }
+
+         if($request->input('actualizarTema5')>0)
+        {
+            $temario->tema_5=$request->input('actualizarTema5');
+        }
+
+         if($request->input('actualizarTema6')>0)
+        {
+            $temario->tema_6=$request->input('actualizarTema6');
+        }
+         if($request->input('actualizarTema7')>0)
+        {
+            $temario->tema_7=$request->input('actualizarTema7');
+        }
+
+         if($request->input('actualizarTema8')>0)
+        {
+            $temario->tema_8=$request->input('actualizarTema8');
+        }
+
+         if($request->input('actualizarTema9')>0)
+        {
+            $temario->tema_9=$request->input('actualizarTema9');
+        }
+
+         if($request->input('actualizarTema10')>0)
+        {
+            $temario->tema_10=$request->input('actualizarTema10');
+        }
+
+         if($request->input('actualizarTema11')>0)
+        {
+            $temario->tema_11=$request->input('actualizarTema11');
+        }
+
+         if($request->input('actualizarTema12')>0)
+        {
+            $temario->tema_12=$request->input('actualizarTema12');
+        }
+         if($request->input('actualizarTema13')>0)
+        {
+            $temario->tema_13=$request->input('actualizarTema13');
+        }
+
+         if($request->input('actualizarTema14')>0)
+        {
+            $temario->tema_14=$request->input('actualizarTema14');
+        }
+
+         if($request->input('actualizarTema15')>0)
+        {
+            $temario->tema_15=$request->input('actualizarTema15');
+        }
+
+        $actualizado=$temario->save();
+        if($actualizado>0)
+        {
+            $resultado="Registro actualizado con exito";
+        }
+        return $resultado;
+    }
 }
 

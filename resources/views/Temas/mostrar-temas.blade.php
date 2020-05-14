@@ -51,7 +51,10 @@
 						</button>
 			      	</form>
 			      	<span class="btn btn-succes"><i class='iconos fas fa-list' title="Mostrar Temas"></i></span>  
-	    	</tr>		 
+	    	</tr>	
+	    	<tr>
+	    		<td colspan="5">@include('temas.actualizar-temas')</td>
+	    	</tr>	 
 		</tbody>
 	  @endforeach
 	  </table>	

@@ -61,7 +61,7 @@
 	    		</tr>
 
 	    		<tr>
-	    			<td>@include('horas.actualizar-horas')</td>
+	    			<td colspan="5">@include('horas.actualizar-horas')</td>
 	    		</tr>
 		    </tbody>
 		@endforeach

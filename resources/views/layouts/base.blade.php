@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/iconos.css')}}">
     <link rel="stylesheet" href="{{ asset('css/secundarias.css')}}">
    <scipt src="{{asset('js/mAniadir.js')}}"></scipt>
-    <scipt src="{{asset('js/prueba.js')}}"></scipt>
+   
     @yield('css')
     <!-- Enlace para poner el icono identificativo-->
     <script src="https://kit.fontawesome.com/459debd0ca.js" crossorigin="anonymous"></script>

@@ -50,7 +50,7 @@
 			      </td>			      
 	    	</tr>		
 	    	<tr>
-	    		<td>@include('grupos.actualizar-grupo')</td>
+	    		<td colspan="4">@include('grupos.actualizar-grupo')</td>
 	    	</tr> 
 		</tbody>
 	  @endforeach

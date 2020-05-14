@@ -7,7 +7,6 @@
 	</div>
 
 	 @include('temarios.crear-temario')
-
 	<div id="filtrar">
 		<form>
 	   	<h3>Filtrar Temarios</h3>
@@ -46,6 +45,9 @@
 			      	</form>
 			      	<span class="btn btn-succes"><i class='iconos fas fa-list' title="Mostrar Temas"></i></span>
 			      </td>		
+	    		</tr>
+	    		<tr>
+	    			<td colspan="3">@include('temarios.actualizar-temario')</td>
 	    		</tr>
 		    </tbody>
 		@endforeach

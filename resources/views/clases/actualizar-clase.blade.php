@@ -1,4 +1,4 @@
-<div id="actualizar">
+<div>
 	<form action="{{asset('/actualizarClases/'.$clase->id)}}" method="POST" class="actualizarForm" id="clases" name="clases" style="display:inline">
 			{{ csrf_field() }}
             {{ method_field('PUT') }}
@@ -19,6 +19,6 @@
 		   			<option value="{{$grupo->id_grupo}}">{{$grupo->nombre_grupo}}</option>
 		   		@endforeach
 		   	</select>
-		   	<button class="btn btn-success">Añadir</button>
+		   	<button class="btn-success">Añadir</button>
 	  </form>
 </div>

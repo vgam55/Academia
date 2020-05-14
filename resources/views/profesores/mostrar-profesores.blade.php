@@ -60,7 +60,7 @@
 			      </td>				      
 	    	</tr>
 	    	<tr>
-	    		<td>@include('profesores.actualizar-profesores')
+	    		<td colspan="7">@include('profesores.actualizar-profesores')
 	    	</tr>	 
 		</tbody>
 	  @endforeach

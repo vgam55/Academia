@@ -1,5 +1,5 @@
 <div id="actualizar">
-	<form action="{{ url('/actualizarProfesores'.$profesor->id) }}" method="POST" class="actualizarForm" id="actualizarProfesores" name="actualizarProfesores" >
+	<form action="{{ url('/actualizarProfesores/'.$profesor->id) }}" method="POST" class="actualizarForm" id="actualizarProfesores" name="actualizarProfesores" >
 			{{ csrf_field() }}
             {{ method_field('PUT') }}
 		    <h3>Actualizar profesor</h3>

@@ -61,4 +61,23 @@ class ProfesoresController extends Controller
         }
         return $resultado;
     }
+
+    public function actualizarProfesor(Request $request, $id)
+    {
+        $resultado="No se pudo actualizar el registro";
+        $profesor=Profesor::find($id);
+        $usuario=User::find($profesor->id_user);
+        $profesor->titulo=$request->input('actualizarTitulo');
+        $actualizarProfe=$profesor->save();
+        $usuario->name=$request->input('actualizarNombre');
+        $usuario->apellidos=$request->input('actualizarApellidos');
+        $usuario->email=$request->input('actualizarEmail');
+        $usuario->telephone=$request->input('actualizarTelefono');
+        $actualizarUser=$usuario->save();
+        if(($actualizarProfe>0)&&($actualizarUser>0))
+        {
+            $resultado="Registro actualizado con exito";
+        }
+        return $resultado;
+    }
 }
