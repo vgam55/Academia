@@ -1,4 +1,4 @@
-<div id="actualizar">
+<div>
 	<h3> Actualizar Temas</h3>
 	<form  action="{{asset('/actualizarTemas/'.$tema->id)}}" method="POST" class="aniadirForm" id="temas" name="temas">
 		{{ csrf_field() }}

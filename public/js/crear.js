@@ -180,6 +180,9 @@ function validarCursos()
 	return correcto;
 }
 
+/*
+  Comprueba si se han introducido datos en los campos que sirven para crear un grupo nuevo
+*/
 function validarGrupos()
 {
 	event.preventDefault();
@@ -279,6 +282,10 @@ function validarHorarios()
 	return correcto;
 }
 
+/*
+	Comprueba si se han introducido datos en los campos que tienen que ver con la creación
+	de una nueva hora en la que dar clases.
+*/
 function validarHoras()
 {
 	event.preventDefault();
@@ -318,7 +325,9 @@ function validarHoras()
 
 	return correcto;
 }
-
+/*
+	Comprueba si se han introducido los datos necesarios para crear un profesor nuevo
+*/
 function validarProfesores()
 {
 	event.preventDefault();
@@ -377,6 +386,9 @@ function validarProfesores()
 	return correcto;
 }
 
+/*
+	Comprueba si se han introducido los datos necesarios para crear un profesor nuevo
+*/
 function validarTemarios()
 {
 	event.preventDefault();
@@ -593,7 +605,7 @@ $(
 	$.ajaxSetup({
     headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    }
+ }
 });
 
 	$('.aniadirForm').submit(function(event){

@@ -1,4 +1,4 @@
-<div class="actualizar1">
+<div>
 		<form  action="{{ asset('/actualizarAlumnos/'.$alumno->id) }}" method="POST" class="actualizarForm" id="actualizarAlumnos" name="actualizarAlumnos" style="display:inline">
 			{{ csrf_field() }}
       		{{ method_field('PUT') }}

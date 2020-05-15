@@ -49,7 +49,7 @@
 			      <td>{{$profesor->titulo}}</td>	
 			      <td>
 			      	<span class="btn btn-success"><i class='fa fa-eye' title='Más información' ></i></span> 
-			      	<span class="btn btn-info"><i class='fas fa-pencil-alt' title='Editar'></i></span>
+			      	<span class="btnEditar btn btn-info"><i class='fas fa-pencil-alt' title='Editar'></i></span>
 			      	<form action="{{url('/borrarProfesores/'.$profesor->id)}}" method="post" class="borrarForm"> 
 						<button class="btn btn-danger" style="padding: 0; height: 40px; width: 40px; margin: 5px 2px;">
 							 @csrf
@@ -59,7 +59,7 @@
 			      	</form>
 			      </td>				      
 	    	</tr>
-	    	<tr>
+	    	<tr class="actualizar">
 	    		<td colspan="7">@include('profesores.actualizar-profesores')
 	    	</tr>	 
 		</tbody>
@@ -74,4 +74,5 @@
 	<script src="{{asset('js/mAniadir.js') }}"></script>
 	<script src="{{ asset('js/crear.js') }}"></script>
 	<script src="{{ asset('js/borrar.js')}}"></script>
+	<script src="{{ asset('js/mActualizar.js')}}"></script>
 @endsection

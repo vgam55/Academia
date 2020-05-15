@@ -42,7 +42,7 @@
 			      <td>{{$tema->horas}}</td>  
 			      <td>
 			      	<span class="btn btn-success"><i class='fa fa-eye' title='Más información' ></i></span> 
-			      	<span class="btn btn-info"><i class='fas fa-pencil-alt' title='Editar'></i></span>
+			      	<span class="btnEditar btn btn-info"><i class='fas fa-pencil-alt' title='Editar'></i></span>
 			      	<form action="{{ url('/borrarTemas/'.$tema->id) }}" method="post" class="borrarForm"> 
 						<button class="btn btn-danger" style="padding: 0; height: 40px; width: 40px; margin: 5px 2px;">
 							 @csrf
@@ -52,7 +52,7 @@
 			      	</form>
 			      	<span class="btn btn-succes"><i class='iconos fas fa-list' title="Mostrar Temas"></i></span>  
 	    	</tr>	
-	    	<tr>
+	    	<tr class="actualizar">
 	    		<td colspan="5">@include('temas.actualizar-temas')</td>
 	    	</tr>	 
 		</tbody>
@@ -66,4 +66,5 @@
 	<script src="{{asset('js/mAniadir.js')}}"></script>
 	<script src="{{asset('js/crear.js')}}"></script>
     <script src="{{asset('js/borrar.js')}}"></script>
+    <script src="{{asset('js/mActualizar.js')}}"></script>
 @endsection
