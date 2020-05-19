@@ -10,6 +10,12 @@ class TemariosController extends Controller
 {
     public function listarTemarios()
     {
+         /*
+            Coge todos los horarios para mostrarlos en una tabla según se carga la pagina.
+            También se mandan los temas que existen a la vista para crear los select de 
+            los formularios que serviran npara filtrar el contenido de una tabla o para
+            crear un nuevo registro
+        */
     	$temarios=Temario::all();
     	$temas=Tema::all();
     	return view('temarios.mostrar-temarios',['temarios'=>$temarios,
@@ -18,6 +24,11 @@ class TemariosController extends Controller
 
     public function aniadirTemario(Request $request)
     {
+        /*
+            Si se llega a este metodo con una llamada Ajax se busca si existe un registro
+            con los mismos datos, si existe, no se hace nada y se avisa. Si no existe se 
+            crea un nuevo registro con esos datos y se avisa
+        */
     	$resultado="No se pudo guardar el registro";
     	if($request->ajax())
     	{
@@ -54,6 +65,9 @@ class TemariosController extends Controller
 
     public function borrarTemario($id)
     {
+         /*
+          Borra el registro a partir del id que recibe y se avisa del resultado
+        */
         $resultado="El registro no pudo borrar";
         $temario=Temario::find($id);
         $borrado=$temario->delete();
@@ -67,6 +81,10 @@ class TemariosController extends Controller
 
     public function actualizarTemario(Request $request, $id)
     {
+        /*
+            Se busca un registro por su id para actualizarlo en función de los
+            datos recibidos por medio del formulario.
+        *//
         $resultado="No se pudo actualizar el registro";
         $temario=Temario::find($id);
         $temario->nombre_temario=$request->input('actualizarNombreTemario');

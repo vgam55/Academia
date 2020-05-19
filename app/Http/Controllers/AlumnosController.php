@@ -10,6 +10,12 @@ class AlumnosController extends Controller
 {
     public function listarAlumnos()
     {
+        /*
+            Coge todos los alumnos para mostrarlos en una tabla según se carga la pagina.
+            También se mandan los grupos que existen a la vista para crear los select de 
+            los formularios que serviran npara filtrar el contenido de una tabla o para
+            crear un nuevo registro
+        */
     	$alumnos=Alumno::all();
     	$alumnos=DB::table('alumnos')
     			->join('grupos','alumnos.id_grupo','=','grupos.id_grupo')
@@ -22,6 +28,11 @@ class AlumnosController extends Controller
 
     public function aniadirAlumno(Request $request)
     {
+        /*
+            Si se llega a este metodo con una llamada Ajax se busca si existe un registro
+            con los mismos datos, si existe, no se hace nada y se avisa. Si no existe se 
+            crea un nuevo registro con esos datos y se avisa
+        */
     	$resultado="El registro no pudo guardarse";
     	$existe="";    
         if($request->ajax())
@@ -49,6 +60,9 @@ class AlumnosController extends Controller
 
     public function borrarAlumno($id)
     {
+        /*
+          Borra el registro a partir del id que recibe y se avisa del resultado
+        */
         $resultado="No se pudo borrar el registro";
         $alumno=Alumno::find($id);
         $borrado=$alumno->delete();
@@ -61,6 +75,10 @@ class AlumnosController extends Controller
 
     public function actualizarAlumno(Request $request, $id)
     {
+        /*
+            Se busca un registro por su id para actualizarlo en función de los
+            datos recibidos por medio del formulario.
+        */
         $resultado="No se pudo actualizar los datos del alumno";
         $alumno=Alumno::find($id);
             $alumno->nombre=$request->input('actualizarNombre');

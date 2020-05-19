@@ -10,19 +10,25 @@ class HorariosController extends Controller
 {
     public function listarHorarios()
     {
+         /*
+            Coge todos los horarios para mostrarlos en una tabla según se carga la pagina.
+            También se mandan las horas que existen a la vista para crear los select de 
+            los formularios que serviran npara filtrar el contenido de una tabla o para
+            crear un nuevo registro
+        */
     	$horarios=Horario::all();
         $horas=Hora::all();
-    	/*$horarios=DB::table('horarios')
-    		    ->join('horas','hora1','=','horas.id')
-    			->select('horarios.id','horarios.nombre_horario','horas.hora_ini','horas.hora_fin','horas.dia')
-    			->get();*/
-    	//echo $horarios;
     	return view('horarios.mostrar-horarios',['horarios'=>$horarios,
                                                  'horas'=>$horas]);
     }
 
     public function aniadirHorario (Request $request)
     {
+         /*
+            Si se llega a este metodo con una llamada Ajax se busca si existe un registro
+            con los mismos datos, si existe, no se hace nada y se avisa. Si no existe se 
+            crea un nuevo registro con esos datos y se avisa
+        */
         $resultado="No se pudo guardar el registro";
         $existe="";
         if($request->ajax())
@@ -50,6 +56,9 @@ class HorariosController extends Controller
 
     public function borrarHorario($id)
     {
+        /*
+          Borra el registro a partir del id que recibe y se avisa del resultado
+        */
         $resultado="No se pudo borrar el registro";
         $horario=Horario::find($id);
         $borrado=$horario->delete();
@@ -63,6 +72,10 @@ class HorariosController extends Controller
     
     public function actualizarHorario(Request $request, $id)
     {
+         /*
+            Se busca un registro por su id para actualizarlo en función de los
+            datos recibidos por medio del formulario.
+        */
         $resultado="No se pudo actualizar el registro";
         $horario=Horario::find($id);
         $horario->nombre_horario=$request->input('actualizarNombreHorario');

@@ -8,12 +8,20 @@ class HorasController extends Controller
 {
     public function listarHoras()
     {
+        /*
+            Coge todos las horas para mostrarlos en una tabla según se carga la pagina.
+        */
     	$horas=Hora::all();
     	return view('horas.mostrar-horas',['horas'=>$horas]);
     }
 
     public function aniadirHoras(Request $request)
     {
+        /*
+            Si se llega a este metodo con una llamada Ajax se busca si existe un registro
+            con los mismos datos, si existe, no se hace nada y se avisa. Si no existe se 
+            crea un nuevo registro con esos datos y se avisa
+        */
     	$resultado="No se pudo guardar el registro";
     	$existe="";
     	
@@ -39,6 +47,9 @@ class HorasController extends Controller
 
     public function borrarHora($id)
     {
+         /*
+          Borra el registro a partir del id que recibe y se avisa del resultado
+        */
         $resultado="No se pudo borrar el registro";
         $hora=Hora::find($id);
         $borrado=$hora->delete();
@@ -51,6 +62,10 @@ class HorasController extends Controller
 
     public function actualizarHora(Request $request, $id)
     {
+         /*
+            Se busca un registro por su id para actualizarlo en función de los
+            datos recibidos por medio del formulario.
+        */
         $resultado="No se pudo actualizar el registro";
         $hora=Hora::find($id);
         if($request->input('actualizarDia')!="0")

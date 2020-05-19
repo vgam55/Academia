@@ -11,6 +11,10 @@ class ProfesoresController extends Controller
 {
     public function listarProfesores()
     {
+         /*
+            Coge todos los profesores para mostrarlos en una tabla según se carga la pagina.
+            También se mandan los datos que cada profesor tienen guardados en la tabla de usuarios
+        */
     	$profesores=DB::table('profesores')
     			    ->join('users','profesores.id_user','=','users.id')
     			    ->select('users.name','users.apellidos','users.email','users.telephone','profesores.id','profesores.titulo')
@@ -20,6 +24,11 @@ class ProfesoresController extends Controller
 
     public function aniadirProfesores(Request $request)
     {
+         /*
+            Si se llega a este metodo con una llamada Ajax se busca si existe un registro
+            con los mismos datos, si existe, no se hace nada y se avisa. Si no existe se 
+            crea un nuevo registro con esos datos y se avisa
+        */
         $resultado="No se pudo guardar el registro";
     	$existe="";
         if($request->ajax())
@@ -52,6 +61,9 @@ class ProfesoresController extends Controller
 
     public function borrarProfesor($id)
     {
+        /*
+          Borra el registro a partir del id que recibe y se avisa del resultado
+        */
         $resultado="No se pudo borrar el registro";
         $profesor=Profesor::find($id);
         $borrado=$profesor->delete();
@@ -64,6 +76,10 @@ class ProfesoresController extends Controller
 
     public function actualizarProfesor(Request $request, $id)
     {
+        /*
+            Se busca un registro por su id para actualizarlo en función de los
+            datos recibidos por medio del formulario.
+        */
         $resultado="No se pudo actualizar el registro";
         $profesor=Profesor::find($id);
         $usuario=User::find($profesor->id_user);

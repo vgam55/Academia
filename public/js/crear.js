@@ -599,7 +599,7 @@ function validarTemas()
 		
 	return correcto;
 }
-
+/* Funcion para utilizar el token csrf*/
 $(
 	function(){
 	$.ajaxSetup({

@@ -12,7 +12,13 @@ class CursosController extends Controller
 {
     public function listarCursos()
     {
-    	//$cursos=Curso::all();
+    	/*
+            Coge todos los cursos para mostrarlos en una tabla según se carga la pagina.
+            Se cogen los datos de los cursos repartidos en distintas tablas
+            También se mandan las clases, los temarios y los horariosque existen a la vista para crear los select de 
+            los formularios que serviran npara filtrar el contenido de una tabla o para
+            crear un nuevo registro
+        */
     	$cursos=DB::table('cursos')
     			->join('clases','id_clase','=','clases.id')
     			->join('temarios', 'id_temario','=','temarios.id')
@@ -30,6 +36,11 @@ class CursosController extends Controller
 
     public function aniadirCurso(Request $request) 
     {
+         /*
+            Si se llega a este metodo con una llamada Ajax se busca si existe un registro
+            con los mismos datos, si existe, no se hace nada y se avisa. Si no existe se 
+            crea un nuevo registro con esos datos y se avisa
+        */
         $resultado="No se pudo guardar el registro";
         $existe="";
         if($request->ajax())
@@ -55,6 +66,9 @@ class CursosController extends Controller
 
     public function borrarCurso($id)
     {
+         /*
+          Borra el registro a partir del id que recibe y se avisa del resultado
+        */
         $resultado="No se pudo borrar el registro";
         $curso=Curso::find($id);
         $borrado=$curso->delete();
@@ -68,6 +82,10 @@ class CursosController extends Controller
 
     public function actualizarCurso(Request $request, $id)
     {
+        /*
+            Se busca un registro por su id para actualizarlo en función de los
+            datos recibidos por medio del formulario.
+        */
         $resultado="El registro no se pudo actualizar";
         $curso=Curso::find($id);
         $curso->nombre_curso=$request->input('actualizarCurso');

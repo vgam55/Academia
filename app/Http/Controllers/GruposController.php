@@ -9,12 +9,20 @@ class GruposController extends Controller
 {
     public function listarGrupos()
     {
+        /*
+            Coge todos los grupos para mostrarlos en una tabla según se carga la pagina.
+        */
     	$grupos=Grupo::all();
     	return view('grupos.mostrar-grupos', ['grupos'=>$grupos]);
     }
 
     public function aniadirGrupos(Request $request)
     {
+        /*
+            Si se llega a este metodo con una llamada Ajax se busca si existe un registro
+            con los mismos datos, si existe, no se hace nada y se avisa. Si no existe se 
+            crea un nuevo registro con esos datos y se avisa
+        */
     	$resultado="No se pudo guardar el registro";
     	$existe="";
     	if($request->ajax())
@@ -39,6 +47,9 @@ class GruposController extends Controller
 
     public function borrarGrupo($id)
     {
+         /*
+          Borra el registro a partir del id que recibe y se avisa del resultado
+        */
         $resultado="No se pudo borrar el grupo";
         $grupo=Grupo::find($id);
         $borrado=$grupo->delete();
@@ -51,6 +62,10 @@ class GruposController extends Controller
 
     public function actualizarGrupo(Request $request, $id)
     {
+         /*
+            Se busca un registro por su id para actualizarlo en función de los
+            datos recibidos por medio del formulario.
+        */
         $resultado="No se pudo actualizar el registro";
         $grupo=Grupo::find($id);
         $grupo->nombre_grupo=$request->input('actualizarNombre');
