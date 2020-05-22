@@ -1,4 +1,5 @@
 <div id="aniadir">
+  {{-- Formulario con los campos que reciben los datos para crear una nuevo registro. Ver crear.js para acabar de ver el proceso completo--}}
   <h3>Añadir Temario</h3>
 
  <form action="{{ url('/aniadirTemarios')}}" method="POST" class="aniadirForm" id="temarios" name="temarios"> 

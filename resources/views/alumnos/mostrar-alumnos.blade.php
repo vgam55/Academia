@@ -2,10 +2,13 @@
 
 @section('content')
 <div id="container" class="container-fluid">
+	{{-- Apartado en el que se incluye el titulo de la pagina y el botón para mostrar y ocultar el apartado donde se crea un nuevo registro (Ver mAniadir.js)--}}
 	<div>
 		<h1><i class='iconos fas fa-user-graduate' style="color: black;"></i>ALUMNOS <a href="#" class="btn btn-primary btnAniadir"><i class='fas fa-plus'></i>  Añadir Alumno</a></h1>
 	</div>
 	 @include('alumnos.crear-alumnos')
+
+	{{-- Apartado con el formulario para filtrar los datos de la tabla Alumnos --}}
 	<div id="filtrar">
 		<form>
 		    <h3>Filtrar alumno</h3>
@@ -51,6 +54,7 @@
 				</div>
 	    </form>
 	</div>
+	{{-- Tabla donde se muestran los datos de los alumnos. Aquí también se muestran los datos que surgen de filtrar la tabla de alumnos en la BD--}}
 	<table class="table">
 	  <thead class="thead-dark">
 	    <tr>
@@ -77,8 +81,10 @@
 			      <td><a href="#">{{$alumno->nombre_grupo}}</a></td>
 			      <td>
 			      	<span class="btn btn-success"><i class='fa fa-eye' title='Más información' ></i></span> 
+			      	{{-- Botón que muestra u oculta el formulario en el que se actualizar el registro al que acompaña (Ver mActualizar.js)--}}
 			      	<span class="btnEditar btn btn-info"><i  class='fas fa-pencil-alt' title='Editar'></i></span>
 			      	
+			      	{{-- Formulario que incluye el botón que hace que se borre el registro al que acompaña (ver borrar.js)--}}
 			      	<form action="{{asset('/borrarAlumnos/'.$alumno->id)}}" class="borrarForm" method="post" style="display:inline"> 
 						<button class="btn btn-danger" style="padding: 0; height: 40px; width: 40px; margin: 5px 2px;">
 							 @csrf
@@ -89,7 +95,9 @@
 			      </td>		
 	    		</tr>
 	    		<tr class="actualizar">
+	    			{{--Explicación en alumnos-actualizar.blade.php--}}
 	    			<td colspan="8">@include('alumnos.actualizar-alumnos')</td>
+	    			}
 	    		</tr>
 		    </tbody>
 		@endforeach

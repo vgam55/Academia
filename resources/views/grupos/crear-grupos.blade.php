@@ -1,4 +1,5 @@
 <div id="aniadir">
+	{{-- Formulario con los campos que reciben los datos para crear una nuevo registro. Ver crear.js para acabar de ver el proceso completo--}}
 		<form action="{{url ('/aniadirGrupos') }}" method="POST" class="aniadirForm" id="grupos" name="grupos" style="display:inline">
 			{{ csrf_field() }}
       		{{ method_field('POST') }}

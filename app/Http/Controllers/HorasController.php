@@ -47,7 +47,7 @@ class HorasController extends Controller
 
     public function borrarHora($id)
     {
-         /*
+        /*
           Borra el registro a partir del id que recibe y se avisa del resultado
         */
         $resultado="No se pudo borrar el registro";
