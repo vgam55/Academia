@@ -97,4 +97,16 @@ class AlumnosController extends Controller
            }  
         return $resultado;
     }
+
+    public function filtrarAlumnos(Request $request)
+    {
+        $nombre=$request->input('filtrarNombre');
+        $apellidos=$request->input('filtrarApellidos');
+        $email=$request->input('filtrarEmail');
+        $telefono=$request->input('filtrarTelefono');
+        $fecha=$request->input('filtrarFecha');
+        $grupo=$request->input('filtrarGrupo');
+        $alumnos= Alumno::FindByName($nombre)->FindByApellidos($apellidos)->get();
+       echo $alumnos;
+    }
 }

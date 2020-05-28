@@ -1,4 +1,5 @@
 <div id="actualizar">
+  {{-- Formulario que coje los datos que permite actualizar el registro correspondiente de la tabla Horarios (ver public/js/mActualizar.js)--}}
 	<form action="{{ asset('/actualizarHorarios/'.$horario->id) }}" method="POST" class="actualizarForm" id="actualizarHorarios" name="actualizarHorarios">
     {{ csrf_field() }}
     {{ method_field('PUT') }}

@@ -1,4 +1,5 @@
 <div>
+	{{-- Formulario que coje los datos que permite actualizar el registro correspondiente de la tabla temas (ver public/js/mActualizar.js)--}}
 	<h3> Actualizar Temas</h3>
 	<form  action="{{asset('/actualizarTemas/'.$tema->id)}}" method="POST" class="aniadirForm" id="temas" name="temas">
 		{{ csrf_field() }}

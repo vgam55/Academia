@@ -84,7 +84,7 @@ class TemariosController extends Controller
         /*
             Se busca un registro por su id para actualizarlo en función de los
             datos recibidos por medio del formulario.
-        *//
+        */
         $resultado="No se pudo actualizar el registro";
         $temario=Temario::find($id);
         $temario->nombre_temario=$request->input('actualizarNombreTemario');

@@ -1,4 +1,5 @@
 <div id="actualizar">
+  {{-- Formulario que coje los datos que permite actualizar el registro correspondiente de la tabla Temarios (ver public/js/mActualizar.js)--}}
   <h3> Actualizar Temario</h3>
 
  <form action="{{ url('/actualizarTemarios/'.$temario->id) }}" method="POST" class="actualizarForm" id="actualizarTemarios" name="actualizarTemarios"> 

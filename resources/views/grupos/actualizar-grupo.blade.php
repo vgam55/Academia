@@ -1,4 +1,5 @@
 <div id="actualizar">
+	{{-- Formulario que coje los datos que permite actualizar el registro correspondiente de la tabla Grupos (ver public/js/mActualizar.js)--}}
 		<form action="{{url ('/actualizarGrupos/'.$grupo->id_grupo) }}" method="POST" class="actualizarForm" id="grupos" name="grupos" style="display:inline">
 			{{ csrf_field() }}
       		{{ method_field('PUT') }}

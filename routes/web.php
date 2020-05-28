@@ -69,3 +69,14 @@ Route::put('/actualizarHoras/{id}','HorasController@actualizarHora');
 Route::put('/actualizarProfesores/{id}','ProfesoresController@actualizarProfesor');
 Route::put('/actualizarTemarios/{id}','TemariosController@actualizarTemario');
 Route::put('/actualizarTemas/{id}','TemasController@actualizarTema');
+
+//Rutas para filtrar los registros de las distintas tablas
+Route::get('/filtrarAlumnos','AlumnosController@filtrarAlumnos');
+Route::get('/filtrarClases','ClasesController@filtrarClases');
+Route::get('/filtrarCursos','CursosController@filtrarClases');
+Route::get('/filtrarGrupos','GruposController@filtrarGrupos');
+Route::get('/filtrarHorarios','HorariosController@filtrarHorarios');
+Route::get('/filtrarHoras','HorasController@filtrarHoras');
+Route::get('/filtrarProfesores','ProfesoresController@filtrarProfesores');
+Route::get('/filtrarTemarios','TemarosController@filtrarTemarios');
+Route::get('/filtrarTemas','TemasController@filtrarTemas');

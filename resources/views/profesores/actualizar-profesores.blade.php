@@ -1,4 +1,5 @@
 <div>
+	{{-- Formulario que coje los datos que permite actualizar el registro correspondiente de la tabla Profesores, y el registro Users asociado (ver public/js/mActualizar.js)--}}
 	<form action="{{ url('/actualizarProfesores/'.$profesor->id) }}" method="POST" class="actualizarForm" id="actualizarProfesores" name="actualizarProfesores" >
 			{{ csrf_field() }}
             {{ method_field('PUT') }}

@@ -1,4 +1,5 @@
 <div>
+	{{-- Formulario que coje los datos que permite actualizar el registro correspondiente de la tabla Alumnos (ver public/js/mActualizar.js)--}}
 		<form  action="{{ asset('/actualizarAlumnos/'.$alumno->id) }}" method="POST" class="actualizarForm" id="actualizarAlumnos" name="actualizarAlumnos" style="display:inline">
 			{{ csrf_field() }}
       		{{ method_field('PUT') }}

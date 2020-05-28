@@ -10,37 +10,39 @@
 
 	{{-- Apartado con el formulario para filtrar los datos de la tabla Alumnos --}}
 	<div id="filtrar">
-		<form>
+		<form action="{{ url('/filtrarAlumnos')}}" method="GET">
+			 @csrf
+             @method('GET')
 		    <h3>Filtrar alumno</h3>
 		    <!-- fila 1-->
 		    <div class="row">
 		    	<div class="col">
 				   	<label for="filtrarNombre">Nombre</label>
-				   	<input type="text" id="filtrarNombre"></input>
+				   	<input type="text" id="filtrarNombre" name="filtrarNombre"></input>
 		   		</div>
 		   	    <div class="col">
 				   	<label for="filtrarApellidos">Apellidos</label>
-				   	<input type="text" id="filtrarApellidos"></input>
+				   	<input type="text" id="filtrarApellidos" name="filtrarApellidos"></input>
 		   		</div>
 		   		<div class="col">
 		   		  	<label for="filtrarEmail">Email  </label>
-		   			<input type="text" id="filtrarEmail"></input>
+		   			<input type="text" id="filtrarEmail" name="filtrarEmail"></input>
 		   		</div>
 		   	 </div>
 		    <!-- fila 2 -->
 		    <div class="row">
 		    	<div class="col">
 				    <label for="filtrarTelefono">Telefono</label>
-				   	<input type="text" id="filtrarTelefono"></input>
+				   	<input type="text" id="filtrarTelefono" name="filtrarTelefono"></input>
 				</div>
 				<div class="col">
 				   	<label for="filtrarFecha">F. Nacimi</label>
-				   	<input type="date" id="filtrarFecha"></input>
+				   	<input type="date" id="filtrarFecha" name="filtrarFecha"></input>
 			    </div>
 			    <div class="col">
 				   	<label for="filtrarGrupo">Grupo</label>
 				   <select class="form-control" id="filtrarGrupo" name="filtrarGrupo">
-       				  <option>Elije un grupo</option>
+       				  <option value="0">Elije un grupo</option>
         				 @foreach($grupos as $grupo)
           					 <option value="{{$grupo->id_grupo}}">{{$grupo->nombre_grupo}}</option>
          				 @endforeach
@@ -97,7 +99,7 @@
 	    		<tr class="actualizar">
 	    			{{--Explicación en alumnos-actualizar.blade.php--}}
 	    			<td colspan="8">@include('alumnos.actualizar-alumnos')</td>
-	    			}
+	    			
 	    		</tr>
 		    </tbody>
 		@endforeach
